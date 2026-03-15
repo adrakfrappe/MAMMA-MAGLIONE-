@@ -1,6 +1,21 @@
-#include<iostream>
-using namespace std;
+#include <SFML/Graphics.hpp>
+using namespace sf;
 int main()
 {
-    cout<<"testor";
+    RenderWindow window(VideoMode({ 200, 200 }), "SFML works!");
+    CircleShape shape(100.f);
+    shape.setFillColor(Color::Magenta);
+
+    while (window.isOpen())
+    {
+        while (const std::optional event = window.pollEvent())
+        {
+            if (event->is<Event::Closed>())
+                window.close();
+        }
+
+        window.clear();
+        window.draw(shape);
+        window.display();
+    }
 }
