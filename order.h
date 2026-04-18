@@ -6,7 +6,8 @@ using namespace sf;
 using namespace std;
 class Order
 {
-	RectangleShape box;
+	
+	Text text2;
 	Text text;
 	vector<string> toppings;
 public:

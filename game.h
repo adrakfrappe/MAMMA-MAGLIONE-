@@ -31,6 +31,11 @@ class Game
 	Ingredients onions;
 	Ingredients pepperoni;
 	Ingredients sausage;
+	Ingredients* draggedIngredients = nullptr; 
+	Text ghazaal;
+	Text muaaz;
+	Text shahbaz;
+	bool dragging = false;
 public:
 	Order* currentOrder;
 	//defining sprites here, will load them in game.cpp

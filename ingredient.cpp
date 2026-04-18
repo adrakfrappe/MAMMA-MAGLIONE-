@@ -4,7 +4,7 @@ Ingredients::Ingredients(const string& filename, Vector2f pos)
 	texture.loadFromFile(filename);
 	sprite.setTexture(texture);
 	sprite.setPosition(pos);
-	sprite.setScale(0.2f, 0.2f); // scale down to fit better
+	sprite.setScale(0.18f, 0.18f); // scale down to fit better
 	spawnposition = pos;
 }
 void Ingredients::draw(RenderWindow& window)
