@@ -1,4 +1,4 @@
-#include "UImanager.h"
+#include "game.h"
 
 void UImanager::addbutton(const Button& button) {
     buttons.push_back(button);

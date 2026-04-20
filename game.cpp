@@ -1,46 +1,54 @@
 #include "game.h"
-#include <iostream>
-#include "button.h"
-#include "pizza.h"
-#include "audio.h"
-#include "order.h"
-#include "ingrediens.h"   // your Ingredients class
-using namespace std;
-using namespace sf;
 
 Game::Game(RenderWindow& win)
     : window(win),
     pizza(),
-    olives("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\olive-.png", { 30, 500 }),
-    cheese("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\cheese-.png", { 550, 500 }),
-    sausage("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\sausage-.png", { 670, 500}),
-    mushrooms("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\mushroom-.png", { 170, 500}),
-    pepperoni("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\pep-.png", { 420, 500 }),
-    onions("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\onion-.png", { 300, 500 })
+    olives("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\olive---.png", { 30, 550 }),
+    cheese("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\cheese--.png", { 550, 545 }),
+    sausage("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\sausage-.png", { 670, 550}),
+    mushrooms("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\mushroom-.png", { 160, 545}),
+    pepperoni("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\pep--.png", { 420, 550 }),
+    onions("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\onion--.png", { 270, 538 }),
+    onions2("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\onion--.png", { 265, 538 }),
+    cucumber("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\cucumber--.png", { 545, 538 }),
+    tomatoes("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\tomato.png", { 145, 545 }),
+    chicken("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\chicken.png", { 670, 545 }),
+    lettuce("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\lettuce-.png", { 30, 550 }),
+    olives2("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\olive---.png", { 420, 550 })
+ 
+
+
 {
     state = gamestate::HOMEPAGE;
 
     // Load font
-    if (!font.loadFromFile("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\dilla-font\\DillaRegular-0vJYP.ttf")) {
+    if (!font.loadFromFile("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\hot-pizza\\hot-pizza.normal.ttf")) {
         std::cout << "Error loading font!" << std::endl;
     }
 
     // Add buttons
     uimanager.addbutton(Button({ 200, 60 }, { 20, 20 }, "Order", font));
-    uimanager.addbutton(Button({ 200, 60 }, { 290, 20 }, "Kitchen", font));
-    uimanager.addbutton(Button({ 200, 60 }, { 580, 20 }, "Oven", font));
+    uimanager.addbutton(Button({ 200, 60 }, { 220, 20 }, "Kitchen", font));
+    uimanager.addbutton(Button({ 200, 60 }, { 400, 20 }, "Oven", font));
+    uimanager.addbutton(Button({ 200, 60 }, { 600, 20 }, "Salad bar", font));
+  
 
     // Load textures
     orderBgTex.loadFromFile("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\order.png");
-    cookingBgTex.loadFromFile("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\cooking station 2.png");
+    cookingBgTex.loadFromFile("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\cooking station.png");
     ovenBgTex.loadFromFile("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\oven.jpeg");
     homeBgTex.loadFromFile("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\outside.png");
-
+    saladbarTex.loadFromFile("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\salad bar.png");
+    ketchupTex.loadFromFile(("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\ranch.png"));
+    mustardTex.loadFromFile(("C:\\Users\\ghazaal\\source\\repos\\mamma maglione 2.6\\assets\\mustard.png"));
     // Assign textures
     orderBackground.setTexture(orderBgTex);
+    saladbarbackground.setTexture(saladbarTex);
     cookingBackground.setTexture(cookingBgTex);
     ovenBackground.setTexture(ovenBgTex);
     homeBackground.setTexture(homeBgTex);
+    ketchupbackground.setTexture(ketchupTex);
+    mustardbackground.setTexture(mustardTex);
 
     // Scale sprites
     auto scaleToWindow = [&](sf::Sprite& sprite, sf::Texture& tex) {
@@ -54,7 +62,7 @@ Game::Game(RenderWindow& win)
     scaleToWindow(cookingBackground, cookingBgTex);
     scaleToWindow(ovenBackground, ovenBgTex);
     scaleToWindow(homeBackground, homeBgTex);
-
+    scaleToWindow(saladbarbackground, saladbarTex);
     currentOrder = new Order(font);
     pizza.generateMatrix(800, 600); // center in 800x800 window
 
@@ -104,51 +112,91 @@ void Game::handleEvents() {
 
         int clickedIndex;
         uimanager.handleEvents(window, event, clickedIndex);
-
         if (clickedIndex == 0) {
             state = gamestate::ORDER_SCREEN;
             currentOrder->generateRandom(); // Generate a new random order when the button is clicked
         }
         else if (clickedIndex == 1) state = gamestate::COOKING_SCREEN;
         else if (clickedIndex == 2) state = gamestate::OVEN_SCREEN;
+        else if (clickedIndex == 3)
+        {
+            state = gamestate::SALADBAR_SCREEN;
+                uimanager.addbutton(Button({ 200, 60 }, { 20, 100 }, "add ranch", font));
+                uimanager.addbutton(Button({ 200, 60 }, { 20, 200 }, "add mustard", font));
+        }
+        if (state == gamestate::SALADBAR_SCREEN && clickedIndex == 4) {
+            pizza.addKetchupSplash(ketchupbackground);
+        }
+        if (state == gamestate::SALADBAR_SCREEN && clickedIndex == 5) {
+            pizza.addmustardSplash(mustardbackground);
+        }
+
+        
         if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left) {
             Vector2f mousepos = window.mapPixelToCoords(Mouse::getPosition(window));
-            if (cheese.getSprite().getGlobalBounds().contains(mousepos)) {
-                draggedIngredients = &cheese; dragging = true;
+            if (state == gamestate::COOKING_SCREEN) {
+                if (cheese.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &cheese; dragging = true;
+                }
+                else if (sausage.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &sausage; dragging = true;
+                }
+                else if (mushrooms.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &mushrooms; dragging = true;
+                }
+                else if (pepperoni.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &pepperoni;  dragging = true;
+                }
+                else if (olives.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &olives; dragging = true;
+                }
+                else if (onions.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &onions; dragging = true;
+                }
             }
-            else if (sausage.getSprite().getGlobalBounds().contains(mousepos)) {
-                draggedIngredients = &sausage; dragging = true;
+            else if (state == gamestate::SALADBAR_SCREEN) {
+                if (onions2.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &onions2; dragging = true;
+                }
+                else if (olives2.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &olives2; dragging = true;
+                }
+                else if (lettuce.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &lettuce; dragging = true;
+                }
+                else if (cucumber.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &cucumber; dragging = true;
+                }
+                else if (chicken.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &chicken; dragging = true;
+                }
+                else if (tomatoes.getSprite().getGlobalBounds().contains(mousepos)) {
+                    draggedIngredients = &tomatoes; dragging = true;
+                }
             }
-            else if (mushrooms.getSprite().getGlobalBounds().contains(mousepos)) {
-                draggedIngredients = &mushrooms; dragging = true;
-            }
-            else if (pepperoni.getSprite().getGlobalBounds().contains(mousepos)) {
-                draggedIngredients = &pepperoni;  dragging = true;
-            }
-            else if (olives.getSprite().getGlobalBounds().contains(mousepos)) {
-                draggedIngredients = &olives; dragging = true;
-            }
-            else if (onions.getSprite().getGlobalBounds().contains(mousepos)) {
-                draggedIngredients = &onions; dragging = true;
-            }
+
         }
         if (event.type == sf::Event::MouseButtonReleased &&
             event.mouseButton.button == sf::Mouse::Left) {
             if (dragging && draggedIngredients) {
                 sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 
-                // Place ingredient into pizza matrix
-                pizza.placeIngredient(mousePos, draggedIngredients->getSprite());
+                if (state == gamestate::COOKING_SCREEN) {
+                    pizza.placeIngredient(mousePos, draggedIngredients->getSprite());
+                }
+                else if (state == gamestate::SALADBAR_SCREEN) {
+                    pizza.placeSaladIngredient(mousePos, draggedIngredients->getSprite());
+                }
 
                 // Respawn ingredient back to bowl
                 draggedIngredients->respawn();
-
                 draggedIngredients = nullptr;
                 dragging = false;
             }
         }
+
     }
-}  
+}
 
 void Game::update() {
     uimanager.update(window);   // hover updates every frame
@@ -187,7 +235,19 @@ void Game::render() {
     else if (state == gamestate::OVEN_SCREEN) {
         window.draw(ovenBackground);
     }
-
+    else if (state == gamestate::SALADBAR_SCREEN)
+    {
+        window.draw(saladbarbackground);
+        pizza.drawsalad(window);
+        olives2.draw(window);
+        cucumber.draw(window);
+        chicken.draw(window);
+        lettuce.draw(window);
+        onions2.draw(window);
+        tomatoes.draw(window);
+     
+    }
     uimanager.draw(window);
     window.display();
 }
+

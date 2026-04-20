@@ -1,18 +1,19 @@
-#include "button.h"
+#include "game.h"
 
 
 Button::Button(const sf::Vector2f& size, const sf::Vector2f& position,
     const string& text, Font& font) {
     shape.setSize(size);
     shape.setPosition(position);
-    normalColor = Color(250, 10, 10);
+    normalColor = Color(255, 230, 190);
     hoverColor = Color(150, 10, 10);
     shape.setFillColor(normalColor);
-
+    label.setOutlineThickness(0.5);
     label.setFont(font);
     label.setString(text);
-    label.setCharacterSize(24);
-    label.setFillColor(sf::Color::Black);
+    label.setCharacterSize(30);
+    label.setOutlineColor(Color::Green);
+    label.setFillColor(sf::Color::Red);
 
     sf:FloatRect textBounds = label.getLocalBounds();
     label.setOrigin(textBounds.left + textBounds.width / 2.0f,

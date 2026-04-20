@@ -6,6 +6,11 @@
 #include "pizza.h"
 #include "audio.h"
 #include "ingrediens.h"
+#include "game.h"
+#include <iostream>
+#include "button.h"
+   // your Ingredients class
+using namespace std;
 using namespace sf;
 
 //class of 3 gamesates
@@ -14,6 +19,7 @@ enum class gamestate {
 	ORDER_SCREEN,
 	COOKING_SCREEN,
 	OVEN_SCREEN,
+	SALADBAR_SCREEN,
 };
 
 //class of Game controlling all the major functions
@@ -31,6 +37,12 @@ class Game
 	Ingredients onions;
 	Ingredients pepperoni;
 	Ingredients sausage;
+	Ingredients tomatoes;
+	Ingredients chicken;
+	Ingredients onions2;
+	Ingredients lettuce;
+	Ingredients olives2;
+	Ingredients cucumber;
 	Ingredients* draggedIngredients = nullptr; 
 	Text ghazaal;
 	Text muaaz;
@@ -43,7 +55,13 @@ public:
 	Texture orderBgTex;
 	Texture cookingBgTex;
 	Texture ovenBgTex;
+	Texture saladbarTex;
+	Texture ketchupTex;
+	Texture mustardTex;
+	Sprite mustardbackground;
+	Sprite ketchupbackground;
 	Sprite homeBackground;
+	Sprite saladbarbackground;
 	Sprite orderBackground;
 	Sprite cookingBackground;
 	Sprite ovenBackground;

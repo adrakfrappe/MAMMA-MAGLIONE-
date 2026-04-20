@@ -132,7 +132,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="audio.cpp" />
-    <ClCompile Include="bowl.cpp" />
     <ClCompile Include="button.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="ingredient.cpp" />
@@ -143,7 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio.h" />
-    <ClInclude Include="bowl.h" />
     <ClInclude Include="button.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="ingrediens.h" />

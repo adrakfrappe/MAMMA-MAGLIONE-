@@ -10,6 +10,8 @@ class Order
 	Text text2;
 	Text text;
 	vector<string> toppings;
+	vector<string> salad;
+	
 public:
 	Order(Font& font);
 	void generateRandom();
