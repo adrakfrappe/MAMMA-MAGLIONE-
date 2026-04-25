@@ -156,7 +156,7 @@ void Pizza::addblenderimage(Sprite blenderbackground)
 	sf::Vector2f bowlCenter(270.f, 230.f); 
 	blenderbackground.setPosition(bowlCenter);
 	blenderbackground.setScale(0.5f, 0.5f);
-	
+	placedmilkingredients.push_back(blenderbackground);
 	
 }
 void Pizza::draw(RenderWindow& window)

@@ -197,6 +197,10 @@ void Game::handleEvents()
             uimanager.addbutton(Button({ 200, 60 }, { 600, 90 }, "milkshake", font));
             uimanager.addbutton(Button({ 200, 60 }, { 600, 160}, "blend", font));
         }
+        else if (state == gamestate::Milkshake_bar && clickedIndex == 7)
+        {
+                pizza.addblenderimage(blenderbackground);
+        }
         if (state == gamestate::SALADBAR_SCREEN && clickedIndex == 5) {
             pizza.addKetchupSplash(ketchupbackground);
 
@@ -204,14 +208,6 @@ void Game::handleEvents()
         if (state == gamestate::SALADBAR_SCREEN && clickedIndex == 6) {
             pizza.addmustardSplash(mustardbackground);
         }
-        if (state == gamestate::Milkshake_bar && clickedIndex == 7)
-        {
-            pizza.addblenderimage(blenderbackground);
-
-        }
-
-
-
         if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left)
         {
             Vector2f mousepos = window.mapPixelToCoords(Mouse::getPosition(window));

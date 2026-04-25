@@ -17,5 +17,8 @@ public:
 	void update(const sf::Vector2i& mousePos);
 	bool isClicked(const sf::Vector2i& mousePos, sf::Event& event);
 
-	string getLabel() const { return label.getString(); }
+	string getLabel() const
+	{
+		return label.getString();
+	}
 };

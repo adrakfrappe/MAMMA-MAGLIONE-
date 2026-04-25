@@ -76,23 +76,26 @@ void Order::generateRandom()
     }
     else if (choice == 2)
     {
-        static const char* flaovourslist[] = {"bananas","strawberries","mangoes","vanilla icecream","chocolate icecream"," icecream"};
+        static const char* flaovourslist[] = {"bananas","strawberries","mangoes","vanilla icecream","chocolate icecream","tutifruti icecream"};
         flavours.clear();
-        flavours.push_back("bananas");
-        flavours.push_back("strawberries");
-		int items = rand() % 3;
-
-        string ordertext = "milkshake with\n";
-
-        for (int i = 0; i < items; i++)
+        flavours.clear();
+        string ordertext = "milkshake with:\n";
+        int fruitCount = 1 + rand() % 2;
+        for (int i = 0; i < fruitCount; i++)
         {
-            int toppingindex = rand() % 6;
+            int toppingindex = rand() % 3; 
             flavours.push_back(flaovourslist[toppingindex]);
             ordertext += flaovourslist[toppingindex];
-            if (i < items - 1)
-                ordertext += '\n';
+            ordertext += "\n"; 
         }
-
+        int iceCreamCount = 1 + rand() % 2;
+        for (int i = 0; i < iceCreamCount; i++)
+        {
+            int toppingindex = 3 + (rand() % 3);
+            flavours.push_back(flaovourslist[toppingindex]);
+            ordertext += flaovourslist[toppingindex];
+            ordertext += "\n";
+        }
         text.setString(ordertext);
     }
 }
