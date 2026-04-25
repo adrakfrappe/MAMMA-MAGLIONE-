@@ -136,7 +136,7 @@ void Pizza::addKetchupSplash(sf::Sprite ketchupbackground)
 	placedSaladIngredients.push_back(ketchupbackground);
 }
 void Pizza::addmustardSplash(Sprite mustardbackground) {
-	sf::Vector2f bowlCenter(270.f, 230.f); // adjust to your salad bar layout
+	sf::Vector2f bowlCenter(265.f, 225.f); // adjust to your salad bar layout
 	mustardbackground.setPosition(bowlCenter);
 	mustardbackground.setScale(0.5f, 0.5f);
 	placedSaladIngredients.push_back(mustardbackground);
@@ -155,7 +155,7 @@ void Pizza::addblenderimage(Sprite blenderbackground)
 {
 	sf::Vector2f bowlCenter(270.f, 230.f); 
 	blenderbackground.setPosition(bowlCenter);
-	blenderbackground.setScale(0.5f, 0.5f);
+	blenderbackground.setScale(1.0f, 1.0f);
 	placedmilkingredients.push_back(blenderbackground);
 	
 }
