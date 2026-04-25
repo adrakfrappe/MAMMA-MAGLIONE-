@@ -23,6 +23,31 @@ void Pizza::generateMatrix(int screenWidth, int screenHeight)
 		}
 	}
 }
+void Pizza::generatematrix1(int screenWidth, int screenHeight)
+{
+	
+	int milkCols = 3;
+	int milkRows = 3;
+	float milkCellSize = 50.f; 
+	float blenderCenterX = 400.f;
+	float blenderCenterY = 350.f;
+	float gridWidth = milkCols * milkCellSize;
+	float gridHeight = milkRows * milkCellSize;
+	float startX = blenderCenterX - (gridWidth / 2.f);
+	float startY = blenderCenterY - (gridHeight / 2.f);
+
+	for (int i = 0; i < milkRows; i++)
+	{
+		for (int j = 0; j < milkCols; j++)
+		{
+			toppingslots[i][j].setRadius(15.f);
+			toppingslots[i][j].setFillColor(Color::Transparent); // Semi-transparent black
+			toppingslots[i][j].setOutlineColor(Color::Transparent);
+			toppingslots[i][j].setOutlineThickness(1);
+			toppingslots[i][j].setPosition(startX + j * milkCellSize, startY + i * milkCellSize);
+		}
+	}
+}
 
 void Pizza::placeIngredient(sf::Vector2f mousePos, sf::Sprite ingredientSprite) {
 	// Pizza center and radius
@@ -67,6 +92,42 @@ void Pizza::placeSaladIngredient(sf::Vector2f mousePos, sf::Sprite ingredientSpr
 		placedSaladIngredients.push_back(ingredientSprite);
 	}
 }
+void Pizza::placemilkingredient(sf::Vector2f mousePos, sf::Sprite ingredientSprite)
+{
+	float blenderCenterX = 400.f;
+	float blenderCenterY = 350.f;
+	float milkCellSize = 50.f;
+	int milkCols = 3;
+	int milkRows = 3;
+
+	float gridWidth = milkCols * milkCellSize;
+	float gridHeight = milkRows * milkCellSize;
+	float startX = blenderCenterX - (gridWidth / 2.f);
+	float startY = blenderCenterY - (gridHeight / 2.f);
+
+	// Check if mouse is within the general area of the jug
+	sf::Vector2f diff = mousePos - sf::Vector2f(blenderCenterX, blenderCenterY);
+	float distance = sqrt(diff.x * diff.x + diff.y * diff.y);
+
+	if (distance <= 120.f) { // Radius of the jug opening
+		// Calculate which row and column was clicked
+		int col = static_cast<int>((mousePos.x - startX) / milkCellSize);
+		int row = static_cast<int>((mousePos.y - startY) / milkCellSize);
+
+		// Ensure indices are within our 3x2 bounds
+		if (col >= 0 && col < milkCols && row >= 0 && row < milkRows) {
+			float snappedX = startX + (col * milkCellSize) + (milkCellSize / 2.f);
+			float snappedY = startY + (row * milkCellSize) + (milkCellSize / 2.f);
+
+			// Center the sprite on the dot
+			ingredientSprite.setOrigin(ingredientSprite.getLocalBounds().width / 2.f,
+				ingredientSprite.getLocalBounds().height / 2.f);
+			ingredientSprite.setPosition(snappedX, snappedY);
+
+			placedmilkingredients.push_back(ingredientSprite);
+		}
+	}
+}
 void Pizza::addKetchupSplash(sf::Sprite ketchupbackground)
 {
 	sf::Vector2f bowlCenter(270.f, 230.f); // adjust to your salad bar layout
@@ -86,8 +147,13 @@ void Pizza::clearSaladIngredients() {
 void Pizza::clearpizzaingredients() {
 	placedIngredients.clear();
 }
-void Pizza::addblenderimage(Sprite blenderbackground){
-	sf::Vector2f bowlCenter(270.f, 230.f); // adjust to your salad bar layout
+void Pizza::clearmilk()
+{
+	placedmilkingredients.clear();
+}
+void Pizza::addblenderimage(Sprite blenderbackground)
+{
+	sf::Vector2f bowlCenter(270.f, 230.f); 
 	blenderbackground.setPosition(bowlCenter);
 	blenderbackground.setScale(0.5f, 0.5f);
 	
@@ -109,6 +175,19 @@ void Pizza::draw(RenderWindow& window)
 void Pizza::drawsalad(RenderWindow& window)
 {
 	for (auto& ing : placedSaladIngredients) {
+		window.draw(ing);
+	}
+}
+void Pizza::drawmilk(RenderWindow& window)//for milk matrix
+{
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			window.draw(toppingslots[i][j]);
+		}
+	}
+	for (auto& ing : placedmilkingredients) {
 		window.draw(ing);
 	}
 }

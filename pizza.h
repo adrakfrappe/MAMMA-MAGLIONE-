@@ -12,7 +12,7 @@ public:
 	vector<vector<CircleShape>> toppingslots;
 	vector<Sprite> placedIngredients;
 	vector<Sprite> placedSaladIngredients;
-
+	vector<Sprite> placedmilkingredients;
 public:
 	Pizza();
 	void generateMatrix(int screenWidth, int screenHeight);
@@ -24,9 +24,9 @@ public:
 	void addmustardSplash(Sprite ketchupbackground);
 	void clearSaladIngredients();
 	void clearpizzaingredients();
-	void addblenderimage(Sprite blenderbackground);
-	/*void generatematix1(int screenWidth, int screenHeight);
+	void addblenderimage(Sprite blenderbackground);//
+	void generatematrix1(int screenWidth, int screenHeight);
 	void placemilkingredient(Vector2f mousePos, Sprite ingredient);
-	void drawmilk(RenderWindow& window);*/
-
+	void drawmilk(RenderWindow& window);
+	void clearmilk();
 };

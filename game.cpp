@@ -15,12 +15,12 @@ Game::Game(RenderWindow& win)
     chicken("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\chicken.png", { 670, 545 }),
     lettuce("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\lettuce-.png", { 30, 550 }),
     olives2("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\olive---.png", { 420, 550 }),//c2
-    banana("C:\\Users\\HM Traders\\Desktop\\ooop project\\banana.png", { 30, 550 }),
-    strawberry("C:\\Users\\HM Traders\\Desktop\\ooop project\\strawberry.png", { 540, 540 }),
-    mangoes("C:\\Users\\HM Traders\\Desktop\\ooop project\\mangoes.png", { 670, 550 }),
-    vanicecream("C:\\Users\\HM Traders\\Desktop\\ooop project\\vanicecream.png", { 670, 550 }),
-    chocolateicecream("C:\\Users\\HM Traders\\Desktop\\ooop project\\chocolateicecream.png", { 670, 550 }),
-    tutifrutiicecream("C:\\Users\\HM Traders\\Desktop\\ooop project\\tutifrutiicecream.png", { 670, 550 })
+    banana("C:\\Users\\HM Traders\\Desktop\\ooop project\\banana.png", { 5, 550 }),
+    strawberry("C:\\Users\\HM Traders\\Desktop\\ooop project\\strawberry.png", { 135, 545 }),
+    mangoes("C:\\Users\\HM Traders\\Desktop\\ooop project\\mangoes.png", { 265, 540 }),
+    vanicecream("C:\\Users\\HM Traders\\Desktop\\ooop project\\vanicecream.png", { 395, 550 }),
+    chocolateicecream("C:\\Users\\HM Traders\\Desktop\\ooop project\\chocolateicecream.png", { 515, 550 }),
+    tutifrutiicecream("C:\\Users\\HM Traders\\Desktop\\ooop project\\tutifrutiicecream.png", { 650, 550 })
 {
     state = gamestate::HOMEPAGE;
 
@@ -58,7 +58,8 @@ Game::Game(RenderWindow& win)
     blenderbackground.setTexture(blenderTex);
 
     // Scale sprites
-    auto scaleToWindow = [&](sf::Sprite& sprite, sf::Texture& tex) {
+    auto scaleToWindow = [&](sf::Sprite& sprite, sf::Texture& tex) 
+        {
         sf::Vector2u texSize = tex.getSize();
         float scaleX = 800.0f / texSize.x;
         float scaleY = 800.0f / texSize.y;
@@ -113,10 +114,13 @@ void Game::run() {
     }
 }
 
-void Game::handleEvents() {
+void Game::handleEvents()
+{
     Event event;
-    while (window.pollEvent(event)) {
-        if (event.type == Event::Closed) {
+    while (window.pollEvent(event))
+    {
+        if (event.type == Event::Closed)
+        {
             window.close();
         }
 
@@ -137,6 +141,7 @@ void Game::handleEvents() {
             state = gamestate::COOKING_SCREEN;
             pizza.clearSaladIngredients();
             pizza.clearpizzaingredients();
+            pizza.clearmilk();
             uimanager.clearbutton();
             uimanager.addbutton(Button({ 200, 60 }, { 20, 20 }, "Order", font));
             uimanager.addbutton(Button({ 200, 60 }, { 220, 20 }, "Kitchen", font));
@@ -149,6 +154,7 @@ void Game::handleEvents() {
             state = gamestate::OVEN_SCREEN;
             pizza.clearSaladIngredients();
             pizza.clearpizzaingredients();
+            pizza.clearmilk();
             uimanager.clearbutton();
             uimanager.addbutton(Button({ 200, 60 }, { 20, 20 }, "Order", font));
             uimanager.addbutton(Button({ 200, 60 }, { 220, 20 }, "Kitchen", font));
@@ -162,13 +168,15 @@ void Game::handleEvents() {
             state = gamestate::SALADBAR_SCREEN;
             pizza.clearSaladIngredients();
             pizza.clearpizzaingredients();
+            pizza.clearmilk();
             uimanager.clearbutton();
             uimanager.addbutton(Button({ 200, 60 }, { 20, 20 }, "Order", font));
             uimanager.addbutton(Button({ 200, 60 }, { 220, 20 }, "Kitchen", font));
             uimanager.addbutton(Button({ 200, 60 }, { 400, 20 }, "Oven", font));
             uimanager.addbutton(Button({ 200, 60 }, { 600, 20 }, "Salad bar", font));
             uimanager.addbutton(Button({ 200, 60 }, { 600, 90 }, "milkshake", font));
-            if (state == gamestate::SALADBAR_SCREEN && clickedIndex == 3) {
+            if (state == gamestate::SALADBAR_SCREEN && clickedIndex == 3) 
+            {
                 uimanager.addbutton(Button({ 200, 60 }, { 20, 100 }, "add ranch", font));
                 uimanager.addbutton(Button({ 200, 60 }, { 20, 175 }, "add mustard", font));
                 pizza.clearpizzaingredients();
@@ -179,7 +187,9 @@ void Game::handleEvents() {
             state = gamestate::Milkshake_bar;
             pizza.clearSaladIngredients();
             pizza.clearpizzaingredients();
+            pizza.clearmilk();
             uimanager.clearbutton();
+            pizza.generatematrix1(800, 600);
             uimanager.addbutton(Button({ 200, 60 }, { 20, 20 }, "Order", font));
             uimanager.addbutton(Button({ 200, 60 }, { 220, 20 }, "Kitchen", font));
             uimanager.addbutton(Button({ 200, 60 }, { 400, 20 }, "Oven", font));
@@ -202,10 +212,12 @@ void Game::handleEvents() {
 
 
 
-        if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left) {
+        if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left)
+        {
             Vector2f mousepos = window.mapPixelToCoords(Mouse::getPosition(window));
             if (state == gamestate::COOKING_SCREEN) {
-                if (cheese.getSprite().getGlobalBounds().contains(mousepos)) {
+                if (cheese.getSprite().getGlobalBounds().contains(mousepos))
+                {
                     draggedIngredients = &cheese; dragging = true;
                 }
                 else if (sausage.getSprite().getGlobalBounds().contains(mousepos)) {
@@ -224,7 +236,8 @@ void Game::handleEvents() {
                     draggedIngredients = &onions; dragging = true;
                 }
             }
-            else if (state == gamestate::SALADBAR_SCREEN) {
+            else if (state == gamestate::SALADBAR_SCREEN)
+            {
                 if (onions2.getSprite().getGlobalBounds().contains(mousepos)) {
                     draggedIngredients = &onions2; dragging = true;
                 }
@@ -244,10 +257,42 @@ void Game::handleEvents() {
                     draggedIngredients = &tomatoes; dragging = true;
                 }
             }
+            else if (state == gamestate::Milkshake_bar)
+            {
+                if (banana.getSprite().getGlobalBounds().contains(mousepos))
+                {
+                    draggedIngredients = &banana;
+                    dragging = true;
+                }
+                else if (strawberry.getSprite().getGlobalBounds().contains(mousepos)) 
+                {
+                    draggedIngredients = &strawberry;
+                    dragging = true;
+                }
+                else if (mangoes.getSprite().getGlobalBounds().contains(mousepos)) 
+                {
+                    draggedIngredients = &mangoes;
+                    dragging = true;
+                }
+                else if (vanicecream.getSprite().getGlobalBounds().contains(mousepos))
+                {
+                    draggedIngredients = &vanicecream;
+                    dragging = true;
+                }
+                else if (chocolateicecream.getSprite().getGlobalBounds().contains(mousepos)) 
+                {
+                    draggedIngredients = &chocolateicecream;
+                    dragging = true;
+                }
+                else if (tutifrutiicecream.getSprite().getGlobalBounds().contains(mousepos)) 
+                {
+                    draggedIngredients = &tutifrutiicecream;
+                    dragging = true;
+                }
+            }
 
         }
-        if (event.type == sf::Event::MouseButtonReleased &&
-            event.mouseButton.button == sf::Mouse::Left) {
+        if (event.type == sf::Event::MouseButtonReleased &&event.mouseButton.button == sf::Mouse::Left) {
             if (dragging && draggedIngredients) {
                 sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 
@@ -256,6 +301,10 @@ void Game::handleEvents() {
                 }
                 else if (state == gamestate::SALADBAR_SCREEN) {
                     pizza.placeSaladIngredient(mousePos, draggedIngredients->getSprite());
+                }
+				else if (state == gamestate::Milkshake_bar)
+                {
+                    pizza.placemilkingredient(mousePos, draggedIngredients->getSprite());
                 }
 
                 // Respawn ingredient back to bowl
@@ -318,9 +367,16 @@ void Game::render() {
         tomatoes.draw(window);
 
     }
-    else if (state == gamestate::Milkshake_bar) {
+    else if (state == gamestate::Milkshake_bar) 
+    {
         window.draw(milkshakebackground);
-		pizza.drawsalad(window);
+		pizza.drawmilk(window);
+        banana.draw(window);
+		strawberry.draw(window);
+		mangoes.draw(window);
+		vanicecream.draw(window);
+		chocolateicecream.draw(window);
+		tutifrutiicecream.draw(window);
 	}
     uimanager.draw(window);
     window.display();
