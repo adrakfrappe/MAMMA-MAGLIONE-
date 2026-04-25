@@ -41,7 +41,7 @@ void Pizza::generatematrix1(int screenWidth, int screenHeight)
 		for (int j = 0; j < milkCols; j++)
 		{
 			toppingslots[i][j].setRadius(15.f);
-			toppingslots[i][j].setFillColor(Color::Transparent); // Semi-transparent black
+			toppingslots[i][j].setFillColor(Color::Transparent); 
 			toppingslots[i][j].setOutlineColor(Color::Transparent);
 			toppingslots[i][j].setOutlineThickness(1);
 			toppingslots[i][j].setPosition(startX + j * milkCellSize, startY + i * milkCellSize);
