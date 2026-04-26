@@ -13,11 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="pngz">
-      <UniqueIdentifier>{1f99c2f1-2b20-48f5-8a83-b553c0157e26}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pngz\pngs">
-      <UniqueIdentifier>{fbc8fff8-a1da-460c-b1d4-fdd0227dc360}</UniqueIdentifier>
+    <Filter Include="Source Files\pngs">
+      <UniqueIdentifier>{bb770977-6f5a-40dd-82eb-68d119b91e26}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -68,108 +65,97 @@
     <ClInclude Include="UImanager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="resource2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource1.h">
+    <ClInclude Include="resource3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="banana.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\blend.jpeg">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="blend.jpeg">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\cheese--.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="cheese--.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\chicken.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="chicken.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\chocolateicecream.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="chocolateicecream.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\cooking station.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="cooking station.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\cucumber--.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="cucumber--.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\ketchup.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="ketchup.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\lettuce-.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="lettuce-.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\mangoes.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="main.jpeg">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\mushroom-.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="mangoes.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\mushroom--.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="milkshakebar.jpeg">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\mustard.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="mushroom-.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\olive-.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="..\project assets\project assets\mushroom-.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\olive---.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="mushroom--.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\onion--.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="mustard.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\order.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="olive-.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\outside.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="olive---.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\pep--.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="order.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\ranch.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="onion--.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\salad bar.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="outside.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\sausage-.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="oven.jpeg">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\tomato.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="pep--.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\strawberry.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="ranch.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\tutifrutiicecream.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="salad bar.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="pngzsz\vanicecream.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="sausage-.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="bananas.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="strawberry.png">
-      <Filter>pngz\pngs</Filter>
+    <Image Include="blend.png">
+      <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="tomato.png">
-      <Filter>pngz\pngs</Filter>
-    </Image>
-    <Image Include="tutifrutiicecream.png">
-      <Filter>pngz\pngs</Filter>
-    </Image>
-    <Image Include="vanicecream.png">
-      <Filter>pngz\pngs</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ogg1.bin">
-      <Filter>pngz\pngs</Filter>
-    </None>
   </ItemGroup>
 </Project>
