@@ -15,7 +15,7 @@ Button::Button(const sf::Vector2f& size, const sf::Vector2f& position,
     label.setOutlineColor(Color::Green);
     label.setFillColor(sf::Color::Red);
 
-sf:FloatRect textBounds = label.getLocalBounds();
+FloatRect textBounds = label.getLocalBounds();
     label.setOrigin(textBounds.left + textBounds.width / 2.0f,
         textBounds.top + textBounds.height / 2.0f);
     label.setPosition(position.x + size.x / 2.0f,

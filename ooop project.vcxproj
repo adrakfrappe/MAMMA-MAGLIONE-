@@ -35,7 +35,44 @@
     <ClInclude Include="ingrediens.h" />
     <ClInclude Include="order.h" />
     <ClInclude Include="pizza.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="UImanager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\project assets\project assets\mushroom-.png" />
+    <Image Include="blend.jpeg" />
+    <Image Include="cheese--.png" />
+    <Image Include="chicken.png" />
+    <Image Include="chocolateicecream.png" />
+    <Image Include="cooking station.png" />
+    <Image Include="cucumber--.png" />
+    <Image Include="ketchup.png" />
+    <Image Include="lettuce-.png" />
+    <Image Include="main.jpeg" />
+    <Image Include="mangoes.png" />
+    <Image Include="milkshakebar.jpeg" />
+    <Image Include="mushroom--.png" />
+    <Image Include="mushroom-.png" />
+    <Image Include="mustard.png" />
+    <Image Include="olive---.png" />
+    <Image Include="olive-.png" />
+    <Image Include="onion--.png" />
+    <Image Include="order.png" />
+    <Image Include="outside.png" />
+    <Image Include="oven.jpeg" />
+    <Image Include="pep--.png" />
+    <Image Include="ranch.png" />
+    <Image Include="salad bar.png" />
+    <Image Include="sausage-.png" />
+    <Image Include="strawberry.png" />
+    <Image Include="tomato.png" />
+    <Image Include="tutifrutiicecream.png" />
+    <Image Include="vanicecream.png" />
+    <Image Include="banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ogg1.bin" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>

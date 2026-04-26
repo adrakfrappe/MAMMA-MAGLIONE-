@@ -1,26 +1,28 @@
+//game.cpp
 #include "game.h"
 #include "UImanager.h"
 Game::Game(RenderWindow& win)
     : window(win),
     pizza(),
-    olives("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\olive-.png", { 30, 550 }),
-    cheese("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\cheese--.png", { 540, 540 }),
-    sausage("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\sausage-.png", { 670, 550 }),
-    mushrooms("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\mushroom-.png", { 160, 545 }),
-    pepperoni("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\pep--.png", { 420, 550 }),
-    onions("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\onion--.png", { 270, 538 }),
-    onions2("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\onion--.png", { 265, 538 }),
-    cucumber("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\cucumber--.png", { 545, 538 }),
-    tomatoes("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\tomato.png", { 145, 545 }),
-    chicken("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\chicken.png", { 670, 545 }),
-    lettuce("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\lettuce-.png", { 30, 550 }),
-    olives2("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\olive---.png", { 420, 550 }),//c2
-    banana("C:\\Users\\HM Traders\\Desktop\\ooop project\\banana.png", { 5, 550 }),
-    strawberry("C:\\Users\\HM Traders\\Desktop\\ooop project\\strawberry.png", { 135, 545 }),
-    mangoes("C:\\Users\\HM Traders\\Desktop\\ooop project\\mangoes.png", { 265, 540 }),
-    vanicecream("C:\\Users\\HM Traders\\Desktop\\ooop project\\vanicecream.png", { 395, 550 }),
-    chocolateicecream("C:\\Users\\HM Traders\\Desktop\\ooop project\\chocolateicecream.png", { 515, 550 }),
-    tutifrutiicecream("C:\\Users\\HM Traders\\Desktop\\ooop project\\tutifrutiicecream.png", { 650, 550 })
+    olives("olive-.png", { 30, 550 }),
+    cheese("cheese--.png", { 540, 540 }),
+    sausage("sausage-.png", { 670, 550 }),
+    mushrooms("mushroom-.png", { 160, 545 }),
+    pepperoni("pep--.png", { 420, 550 }),
+    onions("onion--.png", { 270, 538 }),
+    onions2("onion--.png", { 265, 538 }),
+    cucumber("cucumber--.png", { 545, 538 }),
+    tomatoes("tomato.png", { 145, 545 }),
+    chicken("chicken.png", { 670, 545 }),
+    lettuce("lettuce-.png", { 30, 550 }),
+    olives2("olive---.png", { 420, 550 }),//c2
+    banana("banana.png", { 5, 550 }),
+    strawberry("strawberry.png", { 135, 545 }),
+    mangoes("mangoes.png", { 265, 540 }),
+    vanicecream("vanicecream.png", { 395, 550 }),
+    chocolateicecream("chocolateicecream.png", { 515, 550 }),
+    tutifrutiicecream("tutifrutiicecream.png", { 650, 550 })
+
 {
     state = gamestate::HOMEPAGE;
 
@@ -37,15 +39,15 @@ Game::Game(RenderWindow& win)
 
 
     // Load textures
-    orderBgTex.loadFromFile("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\order.png");
-    cookingBgTex.loadFromFile("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\cooking station.png");
-    ovenBgTex.loadFromFile("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\oven.jpeg");
-    homeBgTex.loadFromFile("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\outside.png");
-    saladbarTex.loadFromFile("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\salad bar.png");
-    ketchupTex.loadFromFile(("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\ranch.png"));
-    mustardTex.loadFromFile(("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\mustard.png"));
-    milkshakeTex.loadFromFile(("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\milkshake.jpeg"));
-    blenderTex.loadFromFile(("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\blend.jpeg"));
+    orderBgTex.loadFromFile("order.png");
+    cookingBgTex.loadFromFile("cooking station.png");
+    ovenBgTex.loadFromFile("oven.jpeg");
+    homeBgTex.loadFromFile("outside.png");
+    saladbarTex.loadFromFile("salad bar.png");
+    ketchupTex.loadFromFile(("ranch.png"));
+    mustardTex.loadFromFile(("mustard.png"));
+    milkshakeTex.loadFromFile(("milkshakebar.jpeg"));
+    blenderTex.loadFromFile(("blend.jpeg"));
     // Assign textures
     orderBackground.setTexture(orderBgTex);
     saladbarbackground.setTexture(saladbarTex);
@@ -78,7 +80,7 @@ Game::Game(RenderWindow& win)
     pizza.generateMatrix(800, 600); // center in 800x800 window
 
     // Start background music
-    audio.start("C:\\Users\\HM Traders\\Desktop\\ooop project\\Mambo Italiano.ogg");
+    audio.start("Mambo Italiano.ogg");
 
     //intro box
 

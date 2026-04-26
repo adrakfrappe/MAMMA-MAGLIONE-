@@ -62,107 +62,108 @@
     <ClInclude Include="UImanager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="ooop project.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
+    <Image Include="vanicecream.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="tutifrutiicecream.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="tomato.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="strawberry.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="sausage-.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="salad bar.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="ranch.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="pep--.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="oven.jpeg">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="order.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="outside.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="onion--.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="olive---.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="olive-.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="mustard.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="milkshakebar.jpeg">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="mangoes.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="main.jpeg">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="mushroom-.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="mushroom--.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="lettuce-.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="ketchup.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="cucumber--.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="chocolateicecream.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="cooking station.png">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="chicken.png">
+      <Filter>Source Files</Filter>
+    </Image>
     <Image Include="banana.png">
-      <Filter>Resource Files</Filter>
+      <Filter>Source Files</Filter>
     </Image>
-    <Image Include="assets\banana.png">
-      <Filter>Resource Files</Filter>
+    <Image Include="cheese--.png">
+      <Filter>Source Files</Filter>
     </Image>
-    <Image Include="assets\cheese--.png">
-      <Filter>Resource Files</Filter>
+    <Image Include="..\project assets\project assets\mushroom-.png">
+      <Filter>Source Files</Filter>
     </Image>
-    <Image Include="assets\chicken.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\chocolateicecream.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\cooking station.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\cucumber--.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\ketchup.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\lettuce-.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\mangoes.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\mushroom-.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\mushroom--.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\mustard.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\olive-.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\olive---.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\onion--.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\order.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\outside.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\pep--.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\ranch.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\salad bar.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\sausage-.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\strawberry.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\tomato.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\tutifrutiicecream.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\vanicecream.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\main.jpeg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\milkshakebar.jpeg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\oven.jpeg">
-      <Filter>Resource Files</Filter>
+    <Image Include="blend.jpeg">
+      <Filter>Source Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="m2.bin">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="bgm1.bin">
-      <Filter>Resource Files</Filter>
+    <None Include="ogg1.bin">
+      <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
 </Project>
