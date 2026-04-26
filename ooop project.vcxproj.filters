@@ -16,6 +16,12 @@
     <Filter Include="Source Files\pngs">
       <UniqueIdentifier>{bb770977-6f5a-40dd-82eb-68d119b91e26}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\font">
+      <UniqueIdentifier>{eb2f1262-b008-44c7-a46a-3c709c70ee8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bgm">
+      <UniqueIdentifier>{060c42a6-6fbe-4d9d-8487-bbd9ce95051b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="audio.cpp">
@@ -63,15 +69,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UImanager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -157,5 +154,15 @@
     <Image Include="blend.png">
       <Filter>Source Files\pngs</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="hot-pizza.normal.ttf">
+      <Filter>Source Files\font</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mambo Italiano.ogg">
+      <Filter>Source Files\bgm</Filter>
+    </None>
   </ItemGroup>
 </Project>

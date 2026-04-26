@@ -27,7 +27,7 @@ Game::Game(RenderWindow& win)
     state = gamestate::HOMEPAGE;
 
     // Load font
-    if (!font.loadFromFile("C:\\Users\\HM Traders\\Desktop\\project assets\\project assets\\hot-pizza\\hot-pizza.normal.ttf")) {
+    if (!font.loadFromFile("hot-pizza.normal.ttf")) {
         std::cout << "Error loading font!" << std::endl;
     }
     //add buttons

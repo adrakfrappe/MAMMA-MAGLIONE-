@@ -35,9 +35,6 @@
     <ClInclude Include="ingrediens.h" />
     <ClInclude Include="order.h" />
     <ClInclude Include="pizza.h" />
-    <ClInclude Include="resource2.h" />
-    <ClInclude Include="resource3.h" />
-    <ClInclude Include="resource4.h" />
     <ClInclude Include="UImanager.h" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +65,12 @@
     <Image Include="pngzsz\tomato.png" />
     <Image Include="pngzsz\tutifrutiicecream.png" />
     <Image Include="pngzsz\vanicecream.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="hot-pizza.normal.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mambo Italiano.ogg" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
