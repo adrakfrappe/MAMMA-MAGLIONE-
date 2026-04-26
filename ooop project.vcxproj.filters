@@ -164,5 +164,6 @@
     <None Include="Mambo Italiano.ogg">
       <Filter>Source Files\bgm</Filter>
     </None>
+    <None Include="readme.md" />
   </ItemGroup>
 </Project>
