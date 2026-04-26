@@ -13,7 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\pngs">
+    <Filter Include="pngz">
+      <UniqueIdentifier>{1f99c2f1-2b20-48f5-8a83-b553c0157e26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pngz\pngs">
       <UniqueIdentifier>{fbc8fff8-a1da-460c-b1d4-fdd0227dc360}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -74,99 +77,99 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="banana.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="blend.jpeg">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="cheese--.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="chicken.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="chocolateicecream.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="cooking station.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="cucumber--.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="ketchup.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="lettuce-.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="main.jpeg">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="mangoes.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="milkshakebar.jpeg">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="mushroom-.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="..\project assets\project assets\mushroom-.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="mushroom--.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="mustard.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="olive-.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="olive---.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="order.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="onion--.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="outside.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="oven.jpeg">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="pep--.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="ranch.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="salad bar.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="sausage-.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="strawberry.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="tomato.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="tutifrutiicecream.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
     <Image Include="vanicecream.png">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
     <None Include="ogg1.bin">
-      <Filter>Source Files\pngs</Filter>
+      <Filter>pngz\pngs</Filter>
     </None>
   </ItemGroup>
 </Project>
