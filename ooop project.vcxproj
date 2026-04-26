@@ -35,44 +35,39 @@
     <ClInclude Include="ingrediens.h" />
     <ClInclude Include="order.h" />
     <ClInclude Include="pizza.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="resource1.h" />
+    <ClInclude Include="resource2.h" />
+    <ClInclude Include="resource3.h" />
+    <ClInclude Include="resource4.h" />
     <ClInclude Include="UImanager.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\project assets\project assets\mushroom-.png" />
-    <Image Include="blend.jpeg" />
-    <Image Include="cheese--.png" />
-    <Image Include="chicken.png" />
-    <Image Include="chocolateicecream.png" />
-    <Image Include="cooking station.png" />
-    <Image Include="cucumber--.png" />
-    <Image Include="ketchup.png" />
-    <Image Include="lettuce-.png" />
-    <Image Include="main.jpeg" />
-    <Image Include="mangoes.png" />
-    <Image Include="milkshakebar.jpeg" />
-    <Image Include="mushroom--.png" />
-    <Image Include="mushroom-.png" />
-    <Image Include="mustard.png" />
-    <Image Include="olive---.png" />
-    <Image Include="olive-.png" />
-    <Image Include="onion--.png" />
-    <Image Include="order.png" />
-    <Image Include="outside.png" />
-    <Image Include="oven.jpeg" />
-    <Image Include="pep--.png" />
-    <Image Include="ranch.png" />
-    <Image Include="salad bar.png" />
-    <Image Include="sausage-.png" />
-    <Image Include="strawberry.png" />
-    <Image Include="tomato.png" />
-    <Image Include="tutifrutiicecream.png" />
-    <Image Include="vanicecream.png" />
-    <Image Include="banana.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ogg1.bin" />
+    <Image Include="bananas.png" />
+    <Image Include="blend.png" />
+    <Image Include="pngzsz\blend.jpeg" />
+    <Image Include="pngzsz\cheese--.png" />
+    <Image Include="pngzsz\chicken.png" />
+    <Image Include="pngzsz\chocolateicecream.png" />
+    <Image Include="pngzsz\cooking station.png" />
+    <Image Include="pngzsz\cucumber--.png" />
+    <Image Include="pngzsz\ketchup.png" />
+    <Image Include="pngzsz\lettuce-.png" />
+    <Image Include="pngzsz\mangoes.png" />
+    <Image Include="pngzsz\mushroom--.png" />
+    <Image Include="pngzsz\mushroom-.png" />
+    <Image Include="pngzsz\mustard.png" />
+    <Image Include="pngzsz\olive---.png" />
+    <Image Include="pngzsz\olive-.png" />
+    <Image Include="pngzsz\onion--.png" />
+    <Image Include="pngzsz\order.png" />
+    <Image Include="pngzsz\outside.png" />
+    <Image Include="pngzsz\pep--.png" />
+    <Image Include="pngzsz\ranch.png" />
+    <Image Include="pngzsz\salad bar.png" />
+    <Image Include="pngzsz\sausage-.png" />
+    <Image Include="pngzsz\strawberry.png" />
+    <Image Include="pngzsz\tomato.png" />
+    <Image Include="pngzsz\tutifrutiicecream.png" />
+    <Image Include="pngzsz\vanicecream.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>

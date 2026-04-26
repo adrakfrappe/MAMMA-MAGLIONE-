@@ -16,7 +16,7 @@ Game::Game(RenderWindow& win)
     chicken("chicken.png", { 670, 545 }),
     lettuce("lettuce-.png", { 30, 550 }),
     olives2("olive---.png", { 420, 550 }),//c2
-    banana("banana.png", { 5, 550 }),
+    banana("bananas.png", { 5, 550 }),
     strawberry("strawberry.png", { 135, 545 }),
     mangoes("mangoes.png", { 265, 540 }),
     vanicecream("vanicecream.png", { 395, 550 }),
@@ -47,7 +47,7 @@ Game::Game(RenderWindow& win)
     ketchupTex.loadFromFile(("ranch.png"));
     mustardTex.loadFromFile(("mustard.png"));
     milkshakeTex.loadFromFile(("milkshakebar.jpeg"));
-    blenderTex.loadFromFile(("blend.jpeg"));
+    blenderTex.loadFromFile(("blend.png"));
     // Assign textures
     orderBackground.setTexture(orderBgTex);
     saladbarbackground.setTexture(saladbarTex);
