@@ -35,20 +35,88 @@
     <ClInclude Include="ingrediens.h" />
     <ClInclude Include="order.h" />
     <ClInclude Include="pizza.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="UImanager.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="bananas.png" />
     <Image Include="blend.png" />
+    <Image Include="cheese--.png" />
+    <Image Include="chicken.png" />
+    <Image Include="chocolateicecream.png" />
+    <Image Include="clock0.jpeg" />
+    <Image Include="clock1.jpeg" />
+    <Image Include="clock10.jpeg" />
+    <Image Include="clock11.jpeg" />
+    <Image Include="clock12.jpeg" />
+    <Image Include="clock13.jpeg" />
+    <Image Include="clock14.jpeg" />
+    <Image Include="clock15.jpeg" />
+    <Image Include="clock16.jpeg" />
+    <Image Include="clock17.jpeg" />
+    <Image Include="clock18.jpeg" />
+    <Image Include="clock19.jpeg" />
+    <Image Include="clock2.jpeg" />
+    <Image Include="clock20.jpeg" />
+    <Image Include="clock3.jpeg" />
+    <Image Include="clock4.jpeg" />
+    <Image Include="clock5.jpeg" />
+    <Image Include="clock6.jpeg" />
+    <Image Include="clock7.jpeg" />
+    <Image Include="clock8.jpeg" />
+    <Image Include="clock9.jpeg" />
+    <Image Include="cooking station.png" />
+    <Image Include="cucumber--.png" />
+    <Image Include="ketchup.png" />
+    <Image Include="lettuce-.png" />
+    <Image Include="main.jpeg" />
+    <Image Include="mangoes.png" />
+    <Image Include="milkshakebar.jpeg" />
+    <Image Include="mushroom--.png" />
+    <Image Include="mushroom-.png" />
+    <Image Include="mustard.png" />
+    <Image Include="olive---.png" />
+    <Image Include="olive-.png" />
+    <Image Include="onion--.png" />
+    <Image Include="order.png" />
+    <Image Include="outside.png" />
+    <Image Include="oven.jpeg" />
+    <Image Include="pep--.png" />
+    <Image Include="pngzsz\bananas.png" />
     <Image Include="pngzsz\blend.jpeg" />
+    <Image Include="pngzsz\blend.png" />
     <Image Include="pngzsz\cheese--.png" />
     <Image Include="pngzsz\chicken.png" />
     <Image Include="pngzsz\chocolateicecream.png" />
+    <Image Include="pngzsz\clock0.jpeg" />
+    <Image Include="pngzsz\clock1.jpeg" />
+    <Image Include="pngzsz\clock10.jpeg" />
+    <Image Include="pngzsz\clock11.jpeg" />
+    <Image Include="pngzsz\clock12.jpeg" />
+    <Image Include="pngzsz\clock13.jpeg" />
+    <Image Include="pngzsz\clock14.jpeg" />
+    <Image Include="pngzsz\clock15.jpeg" />
+    <Image Include="pngzsz\clock16.jpeg" />
+    <Image Include="pngzsz\clock17.jpeg" />
+    <Image Include="pngzsz\clock18.jpeg" />
+    <Image Include="pngzsz\clock19.jpeg" />
+    <Image Include="pngzsz\clock2.jpeg" />
+    <Image Include="pngzsz\clock20.jpeg" />
+    <Image Include="pngzsz\clock3.jpeg" />
+    <Image Include="pngzsz\clock4.jpeg" />
+    <Image Include="pngzsz\clock5.jpeg" />
+    <Image Include="pngzsz\clock6.jpeg" />
+    <Image Include="pngzsz\clock7.jpeg" />
+    <Image Include="pngzsz\clock8.jpeg" />
+    <Image Include="pngzsz\clock9.jpeg" />
     <Image Include="pngzsz\cooking station.png" />
     <Image Include="pngzsz\cucumber--.png" />
     <Image Include="pngzsz\ketchup.png" />
     <Image Include="pngzsz\lettuce-.png" />
+    <Image Include="pngzsz\main.jpeg" />
     <Image Include="pngzsz\mangoes.png" />
+    <Image Include="pngzsz\milkshakebar.jpeg" />
     <Image Include="pngzsz\mushroom--.png" />
     <Image Include="pngzsz\mushroom-.png" />
     <Image Include="pngzsz\mustard.png" />
@@ -57,20 +125,46 @@
     <Image Include="pngzsz\onion--.png" />
     <Image Include="pngzsz\order.png" />
     <Image Include="pngzsz\outside.png" />
+    <Image Include="pngzsz\oven.jpeg" />
     <Image Include="pngzsz\pep--.png" />
     <Image Include="pngzsz\ranch.png" />
+    <Image Include="pngzsz\result.png" />
     <Image Include="pngzsz\salad bar.png" />
     <Image Include="pngzsz\sausage-.png" />
     <Image Include="pngzsz\strawberry.png" />
     <Image Include="pngzsz\tomato.png" />
     <Image Include="pngzsz\tutifrutiicecream.png" />
     <Image Include="pngzsz\vanicecream.png" />
+    <Image Include="ranch.png" />
+    <Image Include="result.png" />
+    <Image Include="salad bar.png" />
+    <Image Include="sausage-.png" />
+    <Image Include="strawberry.png" />
+    <Image Include="tomato.png" />
+    <Image Include="tutifrutiicecream.png" />
+    <Image Include="vanicecream.png" />
   </ItemGroup>
   <ItemGroup>
+    <Font Include="font\hot-pizza.normal.ttf" />
     <Font Include="hot-pizza.normal.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="bgm\Mambo Italiano.ogg" />
+    <None Include="dlls\openal32.dll" />
+    <None Include="dlls\sfml-audio-2.dll" />
+    <None Include="dlls\sfml-audio-d-2.dll" />
+    <None Include="dlls\sfml-graphics-2.dll" />
+    <None Include="dlls\sfml-graphics-d-2.dll" />
+    <None Include="dlls\sfml-network-2.dll" />
+    <None Include="dlls\sfml-network-d-2.dll" />
+    <None Include="dlls\sfml-system-2.dll" />
+    <None Include="dlls\sfml-system-d-2.dll" />
+    <None Include="dlls\sfml-window-2.dll" />
+    <None Include="dlls\sfml-window-d-2.dll" />
     <None Include="Mambo Italiano.ogg" />
+    <None Include="ooop project.aps" />
     <None Include="readme.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -160,13 +254,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;SFML_STACK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Users\shahb\OneDrive\Documents\SFML-2.6.0-windows-vc17-64-bit\SFML-2.6.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\shahb\OneDrive\Documents\SFML-2.6.0-windows-vc17-64-bit\SFML-2.6.0\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-audio-d.lib;sfml-window-d.lib;sfml-graphics-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -178,11 +272,13 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>;$(SolutionDir)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-system.lib;sfml-audio.lib;sfml-window.lib;sfml-graphics.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
