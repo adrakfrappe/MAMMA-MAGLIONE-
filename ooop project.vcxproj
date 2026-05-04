@@ -19,70 +19,76 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="audio.cpp" />
-    <ClCompile Include="button.cpp" />
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="ingredient.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="oreder.cpp" />
-    <ClCompile Include="pizza.cpp" />
-    <ClCompile Include="UImanager.cpp" />
+    <ClCompile Include="source\audio.cpp" />
+    <ClCompile Include="source\button.cpp" />
+    <ClCompile Include="source\game.cpp" />
+    <ClCompile Include="source\ingredient.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\oreder.cpp" />
+    <ClCompile Include="source\pizza.cpp" />
+    <ClCompile Include="source\UImanager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="audio.h" />
-    <ClInclude Include="button.h" />
-    <ClInclude Include="game.h" />
-    <ClInclude Include="ingrediens.h" />
-    <ClInclude Include="order.h" />
-    <ClInclude Include="pizza.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="resource1.h" />
-    <ClInclude Include="UImanager.h" />
+    <ClInclude Include="header\audio.h" />
+    <ClInclude Include="header\button.h" />
+    <ClInclude Include="header\game.h" />
+    <ClInclude Include="header\ingrediens.h" />
+    <ClInclude Include="header\order.h" />
+    <ClInclude Include="header\pizza.h" />
+    <ClInclude Include="header\UImanager.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="bananas.png" />
-    <Image Include="blend.png" />
-    <Image Include="cheese--.png" />
-    <Image Include="chicken.png" />
-    <Image Include="chocolateicecream.png" />
-    <Image Include="clock0.jpeg" />
-    <Image Include="clock1.jpeg" />
-    <Image Include="clock10.jpeg" />
-    <Image Include="clock11.jpeg" />
-    <Image Include="clock12.jpeg" />
-    <Image Include="clock13.jpeg" />
-    <Image Include="clock14.jpeg" />
-    <Image Include="clock15.jpeg" />
-    <Image Include="clock16.jpeg" />
-    <Image Include="clock17.jpeg" />
-    <Image Include="clock18.jpeg" />
-    <Image Include="clock19.jpeg" />
-    <Image Include="clock2.jpeg" />
-    <Image Include="clock20.jpeg" />
-    <Image Include="clock3.jpeg" />
-    <Image Include="clock4.jpeg" />
-    <Image Include="clock5.jpeg" />
-    <Image Include="clock6.jpeg" />
-    <Image Include="clock7.jpeg" />
-    <Image Include="clock8.jpeg" />
-    <Image Include="clock9.jpeg" />
-    <Image Include="cooking station.png" />
-    <Image Include="cucumber--.png" />
-    <Image Include="ketchup.png" />
-    <Image Include="lettuce-.png" />
-    <Image Include="main.jpeg" />
-    <Image Include="mangoes.png" />
-    <Image Include="milkshakebar.jpeg" />
-    <Image Include="mushroom--.png" />
-    <Image Include="mushroom-.png" />
-    <Image Include="mustard.png" />
-    <Image Include="olive---.png" />
-    <Image Include="olive-.png" />
-    <Image Include="onion--.png" />
-    <Image Include="order.png" />
-    <Image Include="outside.png" />
-    <Image Include="oven.jpeg" />
-    <Image Include="pep--.png" />
+    <Image Include="assets\bgstates\cooking station.png" />
+    <Image Include="assets\bgstates\main.jpeg" />
+    <Image Include="assets\bgstates\milkshakebar.jpeg" />
+    <Image Include="assets\bgstates\order.png" />
+    <Image Include="assets\bgstates\outside.png" />
+    <Image Include="assets\bgstates\oven.jpeg" />
+    <Image Include="assets\bgstates\result.png" />
+    <Image Include="assets\bgstates\salad bar.png" />
+    <Image Include="assets\milkshake\bananas.png" />
+    <Image Include="assets\milkshake\blend.png" />
+    <Image Include="assets\milkshake\chocolateicecream.png" />
+    <Image Include="assets\milkshake\mangoes.png" />
+    <Image Include="assets\milkshake\strawberry.png" />
+    <Image Include="assets\milkshake\tutifrutiicecream.png" />
+    <Image Include="assets\milkshake\vanicecream.png" />
+    <Image Include="assets\pizza\cheese--.png" />
+    <Image Include="assets\pizza\chicken.png" />
+    <Image Include="assets\pizza\mushroom-.png" />
+    <Image Include="assets\pizza\olive-.png" />
+    <Image Include="assets\pizza\pep--.png" />
+    <Image Include="assets\pizza\sausage-.png" />
+    <Image Include="assets\salad\cucumber--.png" />
+    <Image Include="assets\salad\ketchup.png" />
+    <Image Include="assets\salad\lettuce-.png" />
+    <Image Include="assets\salad\mushroom--.png" />
+    <Image Include="assets\salad\mustard.png" />
+    <Image Include="assets\salad\olive---.png" />
+    <Image Include="assets\salad\onion--.png" />
+    <Image Include="assets\salad\ranch.png" />
+    <Image Include="assets\salad\tomato.png" />
+    <Image Include="assets\time\clock0.jpeg" />
+    <Image Include="assets\time\clock1.jpeg" />
+    <Image Include="assets\time\clock10.jpeg" />
+    <Image Include="assets\time\clock11.jpeg" />
+    <Image Include="assets\time\clock12.jpeg" />
+    <Image Include="assets\time\clock13.jpeg" />
+    <Image Include="assets\time\clock14.jpeg" />
+    <Image Include="assets\time\clock15.jpeg" />
+    <Image Include="assets\time\clock16.jpeg" />
+    <Image Include="assets\time\clock17.jpeg" />
+    <Image Include="assets\time\clock18.jpeg" />
+    <Image Include="assets\time\clock19.jpeg" />
+    <Image Include="assets\time\clock2.jpeg" />
+    <Image Include="assets\time\clock20.jpeg" />
+    <Image Include="assets\time\clock3.jpeg" />
+    <Image Include="assets\time\clock4.jpeg" />
+    <Image Include="assets\time\clock5.jpeg" />
+    <Image Include="assets\time\clock6.jpeg" />
+    <Image Include="assets\time\clock7.jpeg" />
+    <Image Include="assets\time\clock8.jpeg" />
+    <Image Include="assets\time\clock9.jpeg" />
     <Image Include="pngzsz\bananas.png" />
     <Image Include="pngzsz\blend.jpeg" />
     <Image Include="pngzsz\blend.png" />
@@ -135,22 +141,15 @@
     <Image Include="pngzsz\tomato.png" />
     <Image Include="pngzsz\tutifrutiicecream.png" />
     <Image Include="pngzsz\vanicecream.png" />
-    <Image Include="ranch.png" />
-    <Image Include="result.png" />
-    <Image Include="salad bar.png" />
-    <Image Include="sausage-.png" />
-    <Image Include="strawberry.png" />
-    <Image Include="tomato.png" />
-    <Image Include="tutifrutiicecream.png" />
-    <Image Include="vanicecream.png" />
   </ItemGroup>
   <ItemGroup>
+    <Font Include="assets\font\hot-pizza.normal.ttf" />
     <Font Include="font\hot-pizza.normal.ttf" />
-    <Font Include="hot-pizza.normal.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
+    <None Include="assets\audio\Mambo Italiano.ogg" />
     <None Include="bgm\Mambo Italiano.ogg" />
     <None Include="dlls\openal32.dll" />
     <None Include="dlls\sfml-audio-2.dll" />
@@ -163,8 +162,6 @@
     <None Include="dlls\sfml-system-d-2.dll" />
     <None Include="dlls\sfml-window-2.dll" />
     <None Include="dlls\sfml-window-d-2.dll" />
-    <None Include="Mambo Italiano.ogg" />
-    <None Include="ooop project.aps" />
     <None Include="readme.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -219,6 +216,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <SourcePath>$(SolutionDir)source;$(SourcePath)</SourcePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -254,7 +254,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;SFML_STACK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)header;$(SolutionDir)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

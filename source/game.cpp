@@ -8,30 +8,30 @@ bool blenderchutia = false;
 Game::Game(RenderWindow& win)
     : window(win),
     pizza(),
-    olives("olive-.png", { 30, 550 }),
-    cheese("cheese--.png", { 540, 540 }),
-    sausage("sausage-.png", { 670, 550 }),
-    mushrooms("mushroom-.png", { 160, 545 }),
-    pepperoni("pep--.png", { 420, 550 }),
-    onions("onion--.png", { 270, 538 }),
-    onions2("onion--.png", { 265, 538 }),
-    cucumber("cucumber--.png", { 545, 538 }),
-    tomatoes("tomato.png", { 145, 545 }),
-    chicken("chicken.png", { 670, 545 }),
-    lettuce("lettuce-.png", { 30, 550 }),
-    olives2("olive---.png", { 420, 550 }),//c2
-    banana("bananas.png", { 5, 550 }),
-    strawberry("strawberry.png", { 135, 545 }),
-    mangoes("mangoes.png", { 265, 540 }),
-    vanicecream("vanicecream.png", { 395, 550 }),
-    chocolateicecream("chocolateicecream.png", { 515, 550 }),
-    tutifrutiicecream("tutifrutiicecream.png", { 650, 550 })
+    olives("assets/pizza/olive-.png", { 30, 550 }),
+    cheese("assets/pizza/cheese--.png", { 540, 540 }),
+    sausage("assets/pizza/sausage-.png", { 670, 550 }),
+    mushrooms("assets/pizza/mushroom-.png", { 160, 545 }),
+    pepperoni("assets/pizza/pep--.png", { 420, 550 }),
+    onions("assets/salad/onion--.png", { 270, 538 }),
+    onions2("assets/salad/onion--.png", { 265, 538 }),
+    cucumber("assets/salad/cucumber--.png", { 545, 538 }),
+    tomatoes("assets/salad/tomato.png", { 145, 545 }),
+    chicken("assets/pizza/chicken.png", { 670, 545 }),
+    lettuce("assets/salad/lettuce-.png", { 30, 550 }),
+    olives2("assets/salad/olive---.png", { 420, 550 }),//c2
+    banana("assets/milkshake/bananas.png", { 5, 550 }),
+    strawberry("assets/milkshake/strawberry.png", { 135, 545 }),
+    mangoes("assets/milkshake/mangoes.png", { 265, 540 }),
+    vanicecream("assets/milkshake/vanicecream.png", { 395, 550 }),
+    chocolateicecream("assets/milkshake/chocolateicecream.png", { 515, 550 }),
+    tutifrutiicecream("assets/milkshake/tutifrutiicecream.png", { 650, 550 })
 
 {
     state = gamestate::HOMEPAGE;
 
     // Load font
-    if (!font.loadFromFile("hot-pizza.normal.ttf")) {
+    if (!font.loadFromFile("assets/font/hot-pizza.normal.ttf")) {
         std::cout << "Error loading font!" << std::endl;
     }
     //add buttons
@@ -39,23 +39,23 @@ Game::Game(RenderWindow& win)
     uimanager.addbutton(Button({ 200, 60 }, { 500, 20 }, "Difficult", font));
 
     // Load textures
-    if (!orderBgTex.loadFromFile("order.png"))
+    if (!orderBgTex.loadFromFile("assets/bgstates/order.png"))
         throw runtime_error("Failed to load: order.png");
-    if (!cookingBgTex.loadFromFile("cooking station.png"))
+    if (!cookingBgTex.loadFromFile("assets/bgstates/cooking station.png"))
         throw runtime_error("Failed to load: cooking station.png");
-    if (!ovenBgTex.loadFromFile("oven.jpeg"))
+    if (!ovenBgTex.loadFromFile("assets/bgstates/oven.jpeg"))
         throw runtime_error("Failed to load: oven.jpeg");
-    if (!homeBgTex.loadFromFile("outside.png"))
+    if (!homeBgTex.loadFromFile("assets/bgstates/outside.png"))
         throw runtime_error("Failed to load: outside.png");
-    if (!saladbarTex.loadFromFile("salad bar.png"))
+    if (!saladbarTex.loadFromFile("assets/bgstates/salad bar.png"))
         throw runtime_error("Failed to load: salad bar.png");
-    if (!ranchTex.loadFromFile("ranch.png"))
+    if (!ranchTex.loadFromFile("assets/salad/ranch.png"))
         throw runtime_error("Failed to load: ranch.png");
-    if (!mustardTex.loadFromFile("mustard.png"))
+    if (!mustardTex.loadFromFile("assets/salad/mustard.png"))
         throw runtime_error("Failed to load: mustard.png");
-    if (!milkshakeTex.loadFromFile("milkshakebar.jpeg"))
+    if (!milkshakeTex.loadFromFile("assets/bgstates/milkshakebar.jpeg"))
         throw runtime_error("Failed to load: milkshakebar.jpeg");
-    if (!blenderTex.loadFromFile("blend.png"))
+    if (!blenderTex.loadFromFile("assets/milkshake/blend.png"))
         throw runtime_error("Failed to load: blend.png");
 
     // Assign textures
@@ -90,7 +90,7 @@ Game::Game(RenderWindow& win)
     pizza.generateMatrix(800, 600);
 
     // Start background music
-    audio.start("Mambo Italiano.ogg");
+    audio.start("assets/audio/Mambo Italiano.ogg");
 
     // Intro box
     ghazaal.setFont(font);
@@ -162,7 +162,7 @@ Game::Game(RenderWindow& win)
 
     //clock frames
     for (int i = 0; i < 21; i++) {
-        if (!clockTextures[i].loadFromFile("clock" + to_string(i) + ".jpeg")) {
+        if (!clockTextures[i].loadFromFile("assets/time/clock" + to_string(i) + ".jpeg")) {
             cout << "Error loading clock" << i << ".jpeg" << endl;
         }
     }
@@ -174,7 +174,7 @@ Game::Game(RenderWindow& win)
     );
 
     //result screen
-    if (!resultTex.loadFromFile("result.png"))
+    if (!resultTex.loadFromFile("assets/bgstates/result.png"))
         throw runtime_error("Failed to load: result.png");
     resultBackground.setTexture(resultTex);
     scaleToWindow(resultBackground, resultTex);

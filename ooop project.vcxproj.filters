@@ -24,28 +24,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="audio.cpp">
+    <ClCompile Include="source\audio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="button.cpp">
+    <ClCompile Include="source\button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game.cpp">
+    <ClCompile Include="source\game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ingredient.cpp">
+    <ClCompile Include="source\ingredient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="oreder.cpp">
+    <ClCompile Include="source\oreder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pizza.cpp">
+    <ClCompile Include="source\pizza.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UImanager.cpp">
+    <ClCompile Include="source\UImanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -69,6 +69,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UImanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -148,22 +154,262 @@
     <Image Include="pngzsz\vanicecream.png">
       <Filter>Source Files\pngs</Filter>
     </Image>
-    <Image Include="bananas.png">
-      <Filter>Source Files\pngs</Filter>
+    <Image Include="pngzsz\bananas.png">
+      <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="blend.png">
-      <Filter>Source Files\pngs</Filter>
+    <Image Include="pngzsz\blend.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock0.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock1.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock10.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock11.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock12.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock13.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock14.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock15.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock16.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock17.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock18.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock19.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock2.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock20.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock3.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock4.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock5.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock6.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock7.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock8.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\clock9.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\main.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\milkshakebar.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\oven.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pngzsz\result.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bgstates\cooking station.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bgstates\main.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bgstates\milkshakebar.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bgstates\order.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bgstates\outside.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bgstates\oven.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bgstates\result.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bgstates\salad bar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\milkshake\bananas.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\milkshake\blend.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\milkshake\chocolateicecream.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\milkshake\mangoes.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\milkshake\strawberry.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\milkshake\tutifrutiicecream.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\milkshake\vanicecream.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\pizza\cheese--.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\pizza\chicken.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\pizza\mushroom-.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\pizza\olive-.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\pizza\pep--.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\pizza\sausage-.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\salad\cucumber--.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\salad\ketchup.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\salad\lettuce-.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\salad\mushroom--.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\salad\mustard.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\salad\olive---.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\salad\onion--.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\salad\ranch.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\salad\tomato.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock0.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock1.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock2.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock3.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock4.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock5.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock6.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock7.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock8.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock9.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock10.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock11.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock12.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock13.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock14.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock15.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock16.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock17.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock18.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock19.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\time\clock20.jpeg">
+      <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="hot-pizza.normal.ttf">
-      <Filter>Source Files\font</Filter>
-    </Font>
+    <Font Include="font\hot-pizza.normal.ttf" />
+    <Font Include="assets\font\hot-pizza.normal.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mambo Italiano.ogg">
-      <Filter>Source Files\bgm</Filter>
-    </None>
     <None Include="readme.md" />
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="bgm\Mambo Italiano.ogg" />
+    <None Include="dlls\openal32.dll" />
+    <None Include="dlls\sfml-audio-2.dll" />
+    <None Include="dlls\sfml-audio-d-2.dll" />
+    <None Include="dlls\sfml-graphics-2.dll" />
+    <None Include="dlls\sfml-graphics-d-2.dll" />
+    <None Include="dlls\sfml-network-2.dll" />
+    <None Include="dlls\sfml-network-d-2.dll" />
+    <None Include="dlls\sfml-system-2.dll" />
+    <None Include="dlls\sfml-system-d-2.dll" />
+    <None Include="dlls\sfml-window-2.dll" />
+    <None Include="dlls\sfml-window-d-2.dll" />
+    <None Include="ooop project.aps" />
+    <None Include="assets\audio\Mambo Italiano.ogg" />
   </ItemGroup>
 </Project>
