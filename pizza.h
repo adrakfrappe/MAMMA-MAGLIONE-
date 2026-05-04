@@ -11,7 +11,9 @@ public:
 	float cellSize = 60;
 	vector<vector<CircleShape>> toppingslots;
 	vector<Sprite> placedIngredients;
+	vector<string> placedIngredientNames;
 	vector<Sprite> placedSaladIngredients;
+	vector<string> placedSaladNames;
 	vector<Sprite> placedmilkingredients;
 public:
 	Pizza();
@@ -20,8 +22,9 @@ public:
 	void draw(RenderWindow& window);
 	void drawsalad(RenderWindow& window);
 	void placeSaladIngredient(Vector2f mousePos, Sprite ingredient);
-	void addKetchupSplash(Sprite ketchupbackground);
-	void addmustardSplash(Sprite ketchupbackground);
+	vector<string> placedMilkNames;
+	void addRanchSplash(Sprite ranchbackground);
+	void addmustardSplash(Sprite mustardbackground);
 	void clearSaladIngredients();
 	void clearpizzaingredients();
 	void addblenderimage(Sprite blenderbackground);//
@@ -29,4 +32,16 @@ public:
 	void placemilkingredient(Vector2f mousePos, Sprite ingredient);
 	void drawmilk(RenderWindow& window);
 	void clearmilk();
+
+	void addIngredientName(const string& name);
+	const vector<string>& getPlacedNames() const;
+	void clearIngredientNames();
+
+	void addSaladName(const string& name);
+	const vector<string>& getPlacedSaladNames() const;
+	void clearSaladNames();
+
+	void addMilkName(const string& name);
+	const vector<string>& getPlacedMilkNames() const;
+	void clearMilkNames();
 };

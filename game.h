@@ -20,7 +20,10 @@ enum class gamestate
 	COOKING_SCREEN,
 	OVEN_SCREEN,
 	SALADBAR_SCREEN,
-	Milkshake_bar
+	Milkshake_bar,
+	ResultPizza_SCREEN,
+	ResultSalad_SCREEN,
+	ResultMilk_Screen
 };
 
 //class of Game controlling all the major functions
@@ -54,6 +57,39 @@ class Game
 	Text ghazaal;
 	Text muaaz;
 	Text shahbaz;
+	Text cookingTimeText;
+
+	bool difficultMode = false;
+	int difficultRound = 0;
+	int firstOrderType = -1;
+
+	int totalScore = 0;
+	int Cscore=0;
+	Text scoreText;
+	Text resultLabel;
+
+	Text saladScoreText;
+	Text saladResultLabel;
+
+	Text milkScoreText;
+	Text milkResultLabel;
+	int cookingTimeSeconds;
+
+	// Clock animation
+	Texture clockTextures[21];
+	Sprite clockSprite;
+	int currentClockFrame = 0;
+	bool ovenRunning = false;
+	int serveStoppedAt = 0;
+
+	// Clock timing
+	sf::Clock ovenClock;
+	float clockFrameTimer = 0.f;
+
+	// Result
+	Texture resultTex;
+	Sprite resultBackground;
+
 	bool dragging = false;
 public:
 	Order* currentOrder;
@@ -63,14 +99,14 @@ public:
 	Texture cookingBgTex;
 	Texture ovenBgTex;
 	Texture saladbarTex;
-	Texture ketchupTex;
+	Texture ranchTex;
 	Texture mustardTex;
 	Texture milkshakeTex;
 	Texture blenderTex;
 	Sprite blenderbackground;
 	Sprite milkshakebackground;
 	Sprite mustardbackground;
-	Sprite ketchupbackground;
+	Sprite ranchbackground;
 	Sprite homeBackground;
 	Sprite saladbarbackground;
 	Sprite orderBackground;
