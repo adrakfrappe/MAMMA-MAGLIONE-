@@ -190,7 +190,6 @@ void Game::run() {
 void Game::handleEvents()
 {
     Event event;
-    sf::Clock waqt;
     while (window.pollEvent(event))
     {
         if (event.type == Event::Closed)
