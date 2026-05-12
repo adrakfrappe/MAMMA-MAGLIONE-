@@ -112,12 +112,42 @@ void Pizza::placemilkingredient(sf::Vector2f mousePos, sf::Sprite ingredientSpri
 			float snappedX = startX + (col * milkCellSize) + (milkCellSize / 2.f);
 			float snappedY = startY + (row * milkCellSize) + (milkCellSize / 2.f);
 			ingredientSprite.setOrigin(ingredientSprite.getLocalBounds().width / 2.f,
-				ingredientSprite.getLocalBounds().height / 2.f);
+			ingredientSprite.getLocalBounds().height / 2.f);
 			ingredientSprite.setPosition(snappedX, snappedY);
 			placedmilkingredients.push_back(ingredientSprite);
 		}
 	}
 }
+//void Pizza::placemilkingredient(sf::Vector2f mousePos, sf::Sprite ingredientSprite)
+//{
+//	float blenderCenterX = 400.f;
+//	float blenderCenterY = 350.f;
+//	float milkCellSize = 50.f;
+//	int milkCols = 3;
+//	int milkRows = 3;
+//
+//	float gridWidth = milkCols * milkCellSize;
+//	float gridHeight = milkRows * milkCellSize;
+//	float startX = blenderCenterX - (gridWidth / 2.f);
+//	float startY = blenderCenterY - (gridHeight / 2.f);
+//
+//	sf::Vector2f diff = mousePos - sf::Vector2f(blenderCenterX, blenderCenterY);
+//	float distance = sqrt(diff.x * diff.x + diff.y * diff.y);
+//
+//	if (distance <= 120.f) {
+//		int col = static_cast<int>((mousePos.x - startX) / milkCellSize);
+//		int row = static_cast<int>((mousePos.y - startY) / milkCellSize);
+//
+//		if (col >= 0 && col < milkCols && row >= 0 && row < milkRows) {
+//			float snappedX = startX + (col * milkCellSize) + (milkCellSize / 2.f);
+//			float snappedY = startY + (row * milkCellSize) + (milkCellSize / 2.f);
+//			ingredientSprite.setOrigin(ingredientSprite.getLocalBounds().width / 2.f,
+//			ingredientSprite.getLocalBounds().height / 2.f);
+//			ingredientSprite.setPosition(snappedX, snappedY);
+//			placedmilkingredients.push_back(ingredientSprite);
+//		}
+//	}
+//}
 
 // From first file — ranch splash
 void Pizza::addRanchSplash(sf::Sprite ranchbackground)

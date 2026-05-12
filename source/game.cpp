@@ -3,8 +3,7 @@
 #include "UImanager.h"
 
 int clickedIndex;
-bool blenderchutia = false;
-
+bool blenderopen = false;
 Game::Game(RenderWindow& win)
     : window(win),
     pizza(),
@@ -191,6 +190,7 @@ void Game::run() {
 void Game::handleEvents()
 {
     Event event;
+    sf::Clock waqt;
     while (window.pollEvent(event))
     {
         if (event.type == Event::Closed)
@@ -225,7 +225,9 @@ void Game::handleEvents()
             currentOrder->generateRandom();
         }
         
-        else if (state == gamestate::HOMEPAGE && clickedIndex == 1) {
+        else if (state == gamestate::HOMEPAGE && clickedIndex == 1) 
+        {
+            waqt.restart();
             difficultMode = true;
             difficultRound = 0;
             state = gamestate::ORDER_SCREEN;
@@ -325,7 +327,7 @@ void Game::handleEvents()
         else if (clickedIndex == 4)
         {
             state = gamestate::Milkshake_bar;
-            blenderchutia = false;
+            blenderopen = false;
             pizza.clearSaladIngredients();
             pizza.clearSaladNames();
             pizza.clearpizzaingredients();
@@ -344,7 +346,7 @@ void Game::handleEvents()
         if (state == gamestate::Milkshake_bar && clickedIndex == 5)
         {
             pizza.addblenderimage(blenderbackground);
-            blenderchutia = true;
+            blenderopen = true;
             uimanager.addbutton(Button({ 200, 60 }, { 30, 90 }, "Serve", font));
         }
 
@@ -400,19 +402,33 @@ void Game::handleEvents()
                 uimanager.addbutton(Button({ 200, 60 }, { 600, 20 }, "Salad bar", font));
                 uimanager.addbutton(Button({ 200, 60 }, { 600, 90 }, "milkshake", font));
             }
-            else {
-                if (difficultMode) {
+            else 
+            {
+                if (difficultMode)
+                {
+                    sf::Time elapsed = waqt.getElapsedTime();
+                    float deltaTime = elapsed.asSeconds();
+                    string remarksdt;
+					if (deltaTime < 15 ) 
+                    {
+                       remarksdt= "aray flash!";
+                    }
+                    else if (deltaTime < 30) 
+                    {
+                        remarksdt = "meh speed!";
+                    }
+                    else 
+                    {
+                        remarksdt = "Turtle is more fast!";
+                    }
                     int finalScore = (Cscore + milkScore) / 2;
                     string remarks = finalScore >= 80 ? "Excellent Chef!" :
                         finalScore >= 50 ? "Good Effort!" : "Keep Practicing!";
-                    milkResultLabel.setString(remarks);
-                    milkScoreText.setString(
-                        "Round 1 Score: " + to_string(Cscore) + "/100\n" +
-                        "Round 2 Score: " + to_string(milkScore) + "/100\n" +
-                        "Final Score:   " + to_string(finalScore) + "/100"
-                    );
+                    milkResultLabel.setString(remarks + "\n" + remarksdt);
+                    milkScoreText.setString("\nRound 1 Score: " + to_string(Cscore) + "/100\n" +"Round 2 Score: " + to_string(milkScore) + "/100\n" +"Final Score:   " + to_string(finalScore) + "/100");
                 }
                 difficultMode = false;
+                waqt.restart();
                 state = gamestate::ResultMilk_Screen;
                 uimanager.clearbutton();
                 uimanager.addbutton(Button({ 200, 60 }, { 300, 20 }, "Retry", font));
@@ -476,19 +492,36 @@ void Game::handleEvents()
                 uimanager.addbutton(Button({ 200, 60 }, { 600, 20 }, "Salad bar", font));
                 uimanager.addbutton(Button({ 200, 60 }, { 600, 90 }, "milkshake", font));
             }
-            else {
-                if (difficultMode) {
+            else
+            {
+                if (difficultMode) 
+                {
+                    sf::Time elapsed = waqt.getElapsedTime();
+                    float deltaTime = elapsed.asSeconds();
+                    string remarksdt;
+                    if (deltaTime < 15)
+                    {
+                        remarksdt = "aray flash!";
+                    }
+                    else if (deltaTime < 30)
+                    {
+                        remarksdt = "meh speed!";
+                    }
+                    else
+                    {
+                        remarksdt = "Turtle is more fast!";
+                    }
                     int finalScore = (Cscore + saladScore) / 2;
                     string remarks = finalScore >= 80 ? "Excellent Chef!" :
                         finalScore >= 50 ? "Good Effort!" : "Keep Practicing!";
-                    saladResultLabel.setString(remarks);
+                    saladResultLabel.setString(remarks + "\n" + remarksdt);
                     saladScoreText.setString(
-                        "Round 1 Score: " + to_string(Cscore) + "/100\n" +
+                        "\nRound 1 Score: " + to_string(Cscore) + "/100\n" +
                         "Round 2 Score: " + to_string(saladScore) + "/100\n" +
                         "Final Score:   " + to_string(finalScore) + "/100"
                     );
                 }
-                difficultMode = false;
+                difficultMode = false; waqt.restart();
                 state = gamestate::ResultSalad_SCREEN;
                 uimanager.clearbutton();
                 uimanager.addbutton(Button({ 200, 60 }, { 300, 20 }, "Retry", font));
@@ -574,18 +607,35 @@ void Game::handleEvents()
                 uimanager.addbutton(Button({ 200, 60 }, { 600, 90 }, "milkshake", font));
             }
             else {
-                if (difficultMode) {
+                if (difficultMode) 
+                {
+                    sf::Time elapsed = waqt.getElapsedTime();
+                    float deltaTime = elapsed.asSeconds();
+                    string remarksdt;
+                    if (deltaTime < 15)
+                    {
+                        remarksdt = "aray flash!";
+                    }
+                    else if (deltaTime < 30)
+                    {
+                        remarksdt = "meh speed!";
+                    }
+                    else
+                    {
+                        remarksdt = "Turtle is more fast!";
+                    }
                     int finalScore = (Cscore + totalScore) / 2;
                     string remarks = finalScore >= 80 ? "Excellent Chef!" :
                         finalScore >= 50 ? "Good Effort!" : "Keep Practicing!";
-                    resultLabel.setString(remarks);
+                    resultLabel.setString(remarks + "\n" + remarksdt);
                     scoreText.setString(
-                        "Round 1 Score: " + to_string(Cscore) + "/100\n" +
+                        "\nRound 1 Score: " + to_string(Cscore) + "/100\n" +
                         "Round 2 Score: " + to_string(totalScore) + "/100\n" +
                         "Final Score:   " + to_string(finalScore) + "/100"
                     );
                 }
                 difficultMode = false;
+                waqt.restart();
                 state = gamestate::ResultPizza_SCREEN;
                 uimanager.clearbutton();
                 uimanager.addbutton(Button({ 200, 60 }, { 300, 20 }, "Retry", font));
@@ -637,7 +687,7 @@ void Game::handleEvents()
                     draggedIngredients = &tomatoes; dragging = true;
                 }
             }
-            else if (state == gamestate::Milkshake_bar)
+           /* else if (state == gamestate::Milkshake_bar)
             {
                 if (banana.getSprite().getGlobalBounds().contains(mousepos))
                 {
@@ -668,6 +718,60 @@ void Game::handleEvents()
                 {
                     draggedIngredients = &tutifrutiicecream;
                     dragging = true;
+                }
+            }*/
+            else if (state == gamestate::Milkshake_bar)
+            {
+                if (!blenderopen)
+                {
+                    if (banana.getSprite().getGlobalBounds().contains(mousepos))
+                    {
+                        draggedIngredients = &banana;
+                        dragging = true;
+                        //draggedIngredients->getSprite().setOrigin(draggedIngredients->getSprite().getLocalBounds().width / 2.f, draggedIngredients->getSprite().getLocalBounds().height / 2.f);
+                    }
+                    else if (strawberry.getSprite().getGlobalBounds().contains(mousepos))
+                    {
+                        draggedIngredients = &strawberry;
+                        dragging = true;
+                        /*draggedIngredients->getSprite().setOrigin(
+                            draggedIngredients->getSprite().getLocalBounds().width / 2.f,
+                            draggedIngredients->getSprite().getLocalBounds().height / 2.f*/
+
+                    }
+                    else if (mangoes.getSprite().getGlobalBounds().contains(mousepos))
+                    {
+                        draggedIngredients = &mangoes;
+                        dragging = true;
+                        draggedIngredients->getSprite().setOrigin(
+                            draggedIngredients->getSprite().getLocalBounds().width / 2.f,
+                            draggedIngredients->getSprite().getLocalBounds().height / 2.f
+                        );
+                    }
+                    else if (vanicecream.getSprite().getGlobalBounds().contains(mousepos))
+                    {
+                        draggedIngredients = &vanicecream;
+                        dragging = true;
+                        draggedIngredients->getSprite().setOrigin(
+                            draggedIngredients->getSprite().getLocalBounds().width / 2.f,
+                            draggedIngredients->getSprite().getLocalBounds().height / 2.f
+                        );
+                    }
+                    else if (chocolateicecream.getSprite().getGlobalBounds().contains(mousepos))
+                    {
+                        draggedIngredients = &chocolateicecream;
+                        dragging = true;
+                        draggedIngredients->getSprite().setOrigin(
+                            draggedIngredients->getSprite().getLocalBounds().width / 2.f,
+                            draggedIngredients->getSprite().getLocalBounds().height / 2.f
+                        );
+                    }
+                    else if (tutifrutiicecream.getSprite().getGlobalBounds().contains(mousepos))
+                    {
+                        draggedIngredients = &tutifrutiicecream;
+                        dragging = true;
+                        draggedIngredients->getSprite().setOrigin(draggedIngredients->getSprite().getLocalBounds().width / 2.f, draggedIngredients->getSprite().getLocalBounds().height / 2.f);
+                    }
                 }
             }
         }
@@ -804,7 +908,7 @@ void Game::render() {
         window.draw(milkshakebackground);
         pizza.drawmilk(window);
         //only draw ingredients and generate matrix when blender not yet blended
-        if (!blenderchutia)
+        if (!blenderopen)
         {
             banana.draw(window);
             strawberry.draw(window);
