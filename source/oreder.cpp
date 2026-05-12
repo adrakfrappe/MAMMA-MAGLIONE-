@@ -24,6 +24,10 @@ Order::Order(Font& font)
 }
 void Order::generateRandom()
 {
+    toppings.clear();
+    salad.clear();
+    flavours.clear();
+
     int choice= rand()%3;
     if (choice == 0) {
         static const char* toppinglist[] = { "olives","mushrooms","onions","cheese","pepperoni","sausage" };
