@@ -10,13 +10,10 @@ class Button {
 	Color normalColor; // the color of the button when it's idle
 	Color hoverColor; // the color of the button when the mouse is hovering over it
 public:
-	Button(const sf::Vector2f& size, const sf::Vector2f& position,
-		const std::string& text, sf::Font& font);
-public:
-	void draw(sf::RenderWindow& window);
-	void update(const sf::Vector2i& mousePos);
-	bool isClicked(const sf::Vector2i& mousePos, sf::Event& event);
-
+	Button(const Vector2f& size, const Vector2f& position,const string& text, Font& font);
+	void draw(RenderWindow& window);
+	void update(const Vector2i& mousePos);
+	bool isClicked(const Vector2i& mousePos, Event& event);
 	string getLabel() const
 	{
 		return label.getString();

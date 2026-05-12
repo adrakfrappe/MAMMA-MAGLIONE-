@@ -69,9 +69,9 @@ Game::Game(RenderWindow& win)
     blenderbackground.setTexture(blenderTex);
 
     // Scale sprites
-    auto scaleToWindow = [&](sf::Sprite& sprite, sf::Texture& tex)
+    auto scaleToWindow = [&]( Sprite& sprite,  Texture& tex)
         {
-            sf::Vector2u texSize = tex.getSize();
+             Vector2u texSize = tex.getSize();
             float scaleX = 800.0f / texSize.x;
             float scaleY = 800.0f / texSize.y;
             sprite.setScale(scaleX, scaleY);
@@ -96,66 +96,66 @@ Game::Game(RenderWindow& win)
     ghazaal.setCharacterSize(23);
     ghazaal.setOutlineThickness(1);
     ghazaal.setOutlineColor(Color::Red);
-    ghazaal.setFillColor(sf::Color::Black);
+    ghazaal.setFillColor( Color::Black);
     ghazaal.setPosition(350, 630);
     ghazaal.setString("Ghazaal\n25l-2004");
 
     muaaz.setFont(font);
     muaaz.setCharacterSize(23);
     muaaz.setOutlineThickness(1);
-    muaaz.setOutlineColor(sf::Color::Red);
-    muaaz.setFillColor(sf::Color::Black);
+    muaaz.setOutlineColor( Color::Red);
+    muaaz.setFillColor( Color::Black);
     muaaz.setPosition(150, 670);
     muaaz.setString("Muaaz\n25l-3087");
 
     shahbaz.setFont(font);
     shahbaz.setCharacterSize(23);
     shahbaz.setOutlineThickness(1);
-    shahbaz.setOutlineColor(sf::Color::Red);
-    shahbaz.setFillColor(sf::Color::Black);
+    shahbaz.setOutlineColor( Color::Red);
+    shahbaz.setFillColor( Color::Black);
     shahbaz.setPosition(590, 670);
     shahbaz.setString("Shahbaz\n25l-0006");
 
     cookingTimeText.setFont(font);
     cookingTimeText.setCharacterSize(30);
-    cookingTimeText.setFillColor(sf::Color::White);
-    cookingTimeText.setOutlineColor(sf::Color::Red);
+    cookingTimeText.setFillColor( Color::White);
+    cookingTimeText.setOutlineColor( Color::Red);
     cookingTimeText.setOutlineThickness(1);
     cookingTimeText.setPosition(20, 750);
 
     scoreText.setFont(font);
     scoreText.setCharacterSize(30);
-    scoreText.setFillColor(sf::Color::Black);
+    scoreText.setFillColor( Color::Black);
     scoreText.setPosition(125, 225);
 
     resultLabel.setFont(font);
     resultLabel.setCharacterSize(40);
-    resultLabel.setFillColor(sf::Color::Red);
-    resultLabel.setOutlineColor(sf::Color::Black);
+    resultLabel.setFillColor( Color::Red);
+    resultLabel.setOutlineColor( Color::Black);
     resultLabel.setOutlineThickness(3);
     resultLabel.setPosition(75, 150);
 
     saladScoreText.setFont(font);
     saladScoreText.setCharacterSize(30);
-    saladScoreText.setFillColor(sf::Color::Black);
+    saladScoreText.setFillColor( Color::Black);
     saladScoreText.setPosition(125, 225);
 
     saladResultLabel.setFont(font);
     saladResultLabel.setCharacterSize(40);
-    saladResultLabel.setFillColor(sf::Color::Red);
-    saladResultLabel.setOutlineColor(sf::Color::Black);
+    saladResultLabel.setFillColor( Color::Red);
+    saladResultLabel.setOutlineColor( Color::Black);
     saladResultLabel.setOutlineThickness(3);
     saladResultLabel.setPosition(75, 150);
 
     milkScoreText.setFont(font);
     milkScoreText.setCharacterSize(30);
-    milkScoreText.setFillColor(sf::Color::Black);
+    milkScoreText.setFillColor( Color::Black);
     milkScoreText.setPosition(125, 225);
 
     milkResultLabel.setFont(font);
     milkResultLabel.setCharacterSize(40);
-    milkResultLabel.setFillColor(sf::Color::Red);
-    milkResultLabel.setOutlineColor(sf::Color::Black);
+    milkResultLabel.setFillColor( Color::Red);
+    milkResultLabel.setOutlineColor( Color::Black);
     milkResultLabel.setOutlineThickness(3);
     milkResultLabel.setPosition(75, 150);
 
@@ -190,7 +190,6 @@ void Game::run() {
 void Game::handleEvents()
 {
     Event event;
-    sf::Clock waqt;
     while (window.pollEvent(event))
     {
         if (event.type == Event::Closed)
@@ -406,7 +405,7 @@ void Game::handleEvents()
             {
                 if (difficultMode)
                 {
-                    sf::Time elapsed = waqt.getElapsedTime();
+                     Time elapsed = waqt.getElapsedTime();
                     float deltaTime = elapsed.asSeconds();
                     string remarksdt;
 					if (deltaTime < 15 ) 
@@ -496,7 +495,7 @@ void Game::handleEvents()
             {
                 if (difficultMode) 
                 {
-                    sf::Time elapsed = waqt.getElapsedTime();
+                     Time elapsed = waqt.getElapsedTime();
                     float deltaTime = elapsed.asSeconds();
                     string remarksdt;
                     if (deltaTime < 15)
@@ -609,7 +608,7 @@ void Game::handleEvents()
             else {
                 if (difficultMode) 
                 {
-                    sf::Time elapsed = waqt.getElapsedTime();
+                     Time elapsed = waqt.getElapsedTime();
                     float deltaTime = elapsed.asSeconds();
                     string remarksdt;
                     if (deltaTime < 15)
@@ -687,39 +686,6 @@ void Game::handleEvents()
                     draggedIngredients = &tomatoes; dragging = true;
                 }
             }
-           /* else if (state == gamestate::Milkshake_bar)
-            {
-                if (banana.getSprite().getGlobalBounds().contains(mousepos))
-                {
-                    draggedIngredients = &banana;
-                    dragging = true;
-                }
-                else if (strawberry.getSprite().getGlobalBounds().contains(mousepos))
-                {
-                    draggedIngredients = &strawberry;
-                    dragging = true;
-                }
-                else if (mangoes.getSprite().getGlobalBounds().contains(mousepos))
-                {
-                    draggedIngredients = &mangoes;
-                    dragging = true;
-                }
-                else if (vanicecream.getSprite().getGlobalBounds().contains(mousepos))
-                {
-                    draggedIngredients = &vanicecream;
-                    dragging = true;
-                }
-                else if (chocolateicecream.getSprite().getGlobalBounds().contains(mousepos))
-                {
-                    draggedIngredients = &chocolateicecream;
-                    dragging = true;
-                }
-                else if (tutifrutiicecream.getSprite().getGlobalBounds().contains(mousepos))
-                {
-                    draggedIngredients = &tutifrutiicecream;
-                    dragging = true;
-                }
-            }*/
             else if (state == gamestate::Milkshake_bar)
             {
                 if (!blenderopen)
@@ -728,43 +694,32 @@ void Game::handleEvents()
                     {
                         draggedIngredients = &banana;
                         dragging = true;
-                        //draggedIngredients->getSprite().setOrigin(draggedIngredients->getSprite().getLocalBounds().width / 2.f, draggedIngredients->getSprite().getLocalBounds().height / 2.f);
+                        draggedIngredients->getSprite().setOrigin(draggedIngredients->getSprite().getLocalBounds().width / 2.f, draggedIngredients->getSprite().getLocalBounds().height / 2.f);
                     }
                     else if (strawberry.getSprite().getGlobalBounds().contains(mousepos))
                     {
                         draggedIngredients = &strawberry;
                         dragging = true;
-                        /*draggedIngredients->getSprite().setOrigin(
-                            draggedIngredients->getSprite().getLocalBounds().width / 2.f,
-                            draggedIngredients->getSprite().getLocalBounds().height / 2.f*/
-
+                        draggedIngredients->getSprite().setOrigin(draggedIngredients->getSprite().getLocalBounds().width / 2.f, draggedIngredients->getSprite().getLocalBounds().height / 2.f);
                     }
                     else if (mangoes.getSprite().getGlobalBounds().contains(mousepos))
                     {
                         draggedIngredients = &mangoes;
                         dragging = true;
-                        draggedIngredients->getSprite().setOrigin(
-                            draggedIngredients->getSprite().getLocalBounds().width / 2.f,
-                            draggedIngredients->getSprite().getLocalBounds().height / 2.f
-                        );
+                        draggedIngredients->getSprite().setOrigin(draggedIngredients->getSprite().getLocalBounds().width / 2.f, draggedIngredients->getSprite().getLocalBounds().height / 2.f);
+                       
                     }
                     else if (vanicecream.getSprite().getGlobalBounds().contains(mousepos))
                     {
                         draggedIngredients = &vanicecream;
                         dragging = true;
-                        draggedIngredients->getSprite().setOrigin(
-                            draggedIngredients->getSprite().getLocalBounds().width / 2.f,
-                            draggedIngredients->getSprite().getLocalBounds().height / 2.f
-                        );
+                        draggedIngredients->getSprite().setOrigin(draggedIngredients->getSprite().getLocalBounds().width / 2.f,draggedIngredients->getSprite().getLocalBounds().height / 2.f);
                     }
                     else if (chocolateicecream.getSprite().getGlobalBounds().contains(mousepos))
                     {
                         draggedIngredients = &chocolateicecream;
                         dragging = true;
-                        draggedIngredients->getSprite().setOrigin(
-                            draggedIngredients->getSprite().getLocalBounds().width / 2.f,
-                            draggedIngredients->getSprite().getLocalBounds().height / 2.f
-                        );
+                        draggedIngredients->getSprite().setOrigin(draggedIngredients->getSprite().getLocalBounds().width / 2.f, draggedIngredients->getSprite().getLocalBounds().height / 2.f);
                     }
                     else if (tutifrutiicecream.getSprite().getGlobalBounds().contains(mousepos))
                     {
@@ -776,9 +731,9 @@ void Game::handleEvents()
             }
         }
 
-        if (event.type == sf::Event::MouseButtonReleased && event.mouseButton.button == sf::Mouse::Left) {
+        if (event.type ==  Event::MouseButtonReleased && event.mouseButton.button ==  Mouse::Left) {
             if (dragging && draggedIngredients) {
-                sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+                 Vector2f mousePos = window.mapPixelToCoords( Mouse::getPosition(window));
 
                 if (state == gamestate::COOKING_SCREEN) {
                     pizza.placeIngredient(mousePos, draggedIngredients->getSprite());
@@ -825,7 +780,7 @@ void Game::handleEvents()
 void Game::update() {
     uimanager.update(window);
     if (dragging && draggedIngredients) {
-        sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+         Vector2f mousePos = window.mapPixelToCoords( Mouse::getPosition(window));
         draggedIngredients->getSprite().setPosition(mousePos);
     }
 

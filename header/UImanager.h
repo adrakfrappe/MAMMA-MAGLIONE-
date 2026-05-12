@@ -8,8 +8,8 @@ class UImanager
 	std::vector<Button> buttons; // vector of buttons
 public:
 	void addbutton(const Button& button);
-	void draw(sf::RenderWindow& window);
+	void draw(RenderWindow& window);
 	void handleEvents(RenderWindow& window, Event& event, int& clickedIndex);
-	void update(sf::RenderWindow& window);
+	void update(RenderWindow& window);
 	void clearbutton();
 };

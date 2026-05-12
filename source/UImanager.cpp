@@ -12,7 +12,7 @@ void UImanager::draw(sf::RenderWindow& window) {
 }
 
 void UImanager::handleEvents(sf::RenderWindow& window, sf::Event& event, int& clickedIndex) {
-    sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+    Vector2i mousePos = sf::Mouse::getPosition(window);
 
     for (size_t i = 0; i < buttons.size(); ++i) {
         if (buttons[i].isClicked(mousePos, event)) {
@@ -25,7 +25,7 @@ void UImanager::handleEvents(sf::RenderWindow& window, sf::Event& event, int& cl
 }
 
 void UImanager::update(sf::RenderWindow& window) {
-    sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+    Vector2i mousePos = sf::Mouse::getPosition(window);
     for (auto& button : buttons) {
         button.update(mousePos);
     }

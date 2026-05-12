@@ -1,8 +1,7 @@
 #include "game.h"
+#include"button.h"
 
-
-Button::Button(const sf::Vector2f& size, const sf::Vector2f& position,
-    const string& text, Font& font) {
+Button::Button(const Vector2f& size, const Vector2f& position,const string& text, Font& font) {
     shape.setSize(size);
     shape.setPosition(position);
     normalColor = Color(255, 230, 190);

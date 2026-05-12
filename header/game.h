@@ -89,7 +89,7 @@ class Game
 	// Result
 	Texture resultTex;
 	Sprite resultBackground;
-
+	Clock waqt;
 	bool dragging = false;
 public:
 	Order* currentOrder;

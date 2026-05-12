@@ -3,8 +3,9 @@
 using namespace std;
 using namespace sf;
 
-Pizza::Pizza() {
-	toppingslots.resize(rows, std::vector<sf::CircleShape>(cols));
+Pizza::Pizza()
+{
+	toppingslots.resize(rows, vector<CircleShape>(cols));
 }
 
 void Pizza::generateMatrix(int screenWidth, int screenHeight)
@@ -51,11 +52,11 @@ void Pizza::generatematrix1(int screenWidth, int screenHeight)
 	}
 }
 
-void Pizza::placeIngredient(sf::Vector2f mousePos, sf::Sprite ingredientSprite) {
-	sf::Vector2f pizzaCenter(345.f, 220.f);
+void Pizza::placeIngredient( Vector2f mousePos,  Sprite ingredientSprite) {
+	 Vector2f pizzaCenter(345.f, 220.f);
 	float pizzaRadius = 150.f;
 
-	sf::Vector2f diff = mousePos - pizzaCenter;
+	 Vector2f diff = mousePos - pizzaCenter;
 	float distance = sqrt(diff.x * diff.x + diff.y * diff.y);
 
 	if (distance <= pizzaRadius) {
@@ -69,12 +70,12 @@ void Pizza::placeIngredient(sf::Vector2f mousePos, sf::Sprite ingredientSprite) 
 	}
 }
 
-void Pizza::placeSaladIngredient(sf::Vector2f mousePos, sf::Sprite ingredientSprite)
+void Pizza::placeSaladIngredient( Vector2f mousePos,  Sprite ingredientSprite)
 {
-	sf::Vector2f bowlCenter(340.f, 260.f);
+	 Vector2f bowlCenter(340.f, 260.f);
 	float bowlRadius = 100.f;
 
-	sf::Vector2f diff = mousePos - bowlCenter;
+	 Vector2f diff = mousePos - bowlCenter;
 	float distance = sqrt(diff.x * diff.x + diff.y * diff.y);
 
 	if (distance <= bowlRadius) {
@@ -88,7 +89,7 @@ void Pizza::placeSaladIngredient(sf::Vector2f mousePos, sf::Sprite ingredientSpr
 	}
 }
 
-void Pizza::placemilkingredient(sf::Vector2f mousePos, sf::Sprite ingredientSprite)
+void Pizza::placemilkingredient( Vector2f mousePos,  Sprite ingredientSprite)
 {
 	float blenderCenterX = 400.f;
 	float blenderCenterY = 350.f;
@@ -101,7 +102,7 @@ void Pizza::placemilkingredient(sf::Vector2f mousePos, sf::Sprite ingredientSpri
 	float startX = blenderCenterX - (gridWidth / 2.f);
 	float startY = blenderCenterY - (gridHeight / 2.f);
 
-	sf::Vector2f diff = mousePos - sf::Vector2f(blenderCenterX, blenderCenterY);
+	Vector2f diff = mousePos - Vector2f(blenderCenterX, blenderCenterY);
 	float distance = sqrt(diff.x * diff.x + diff.y * diff.y);
 
 	if (distance <= 120.f) {
@@ -118,36 +119,6 @@ void Pizza::placemilkingredient(sf::Vector2f mousePos, sf::Sprite ingredientSpri
 		}
 	}
 }
-//void Pizza::placemilkingredient(sf::Vector2f mousePos, sf::Sprite ingredientSprite)
-//{
-//	float blenderCenterX = 400.f;
-//	float blenderCenterY = 350.f;
-//	float milkCellSize = 50.f;
-//	int milkCols = 3;
-//	int milkRows = 3;
-//
-//	float gridWidth = milkCols * milkCellSize;
-//	float gridHeight = milkRows * milkCellSize;
-//	float startX = blenderCenterX - (gridWidth / 2.f);
-//	float startY = blenderCenterY - (gridHeight / 2.f);
-//
-//	sf::Vector2f diff = mousePos - sf::Vector2f(blenderCenterX, blenderCenterY);
-//	float distance = sqrt(diff.x * diff.x + diff.y * diff.y);
-//
-//	if (distance <= 120.f) {
-//		int col = static_cast<int>((mousePos.x - startX) / milkCellSize);
-//		int row = static_cast<int>((mousePos.y - startY) / milkCellSize);
-//
-//		if (col >= 0 && col < milkCols && row >= 0 && row < milkRows) {
-//			float snappedX = startX + (col * milkCellSize) + (milkCellSize / 2.f);
-//			float snappedY = startY + (row * milkCellSize) + (milkCellSize / 2.f);
-//			ingredientSprite.setOrigin(ingredientSprite.getLocalBounds().width / 2.f,
-//			ingredientSprite.getLocalBounds().height / 2.f);
-//			ingredientSprite.setPosition(snappedX, snappedY);
-//			placedmilkingredients.push_back(ingredientSprite);
-//		}
-//	}
-//}
 
 // From first file — ranch splash
 void Pizza::addRanchSplash(sf::Sprite ranchbackground)

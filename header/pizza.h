@@ -15,7 +15,6 @@ public:
 	vector<Sprite> placedSaladIngredients;
 	vector<string> placedSaladNames;
 	vector<Sprite> placedmilkingredients;
-public:
 	Pizza();
 	void generateMatrix(int screenWidth, int screenHeight);
 	void placeIngredient(Vector2f mousePos, Sprite ingredient);

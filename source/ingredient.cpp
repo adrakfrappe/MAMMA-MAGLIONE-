@@ -17,5 +17,6 @@ Sprite& Ingredients::getSprite()
 }
 void Ingredients::respawn()
 {
+	sprite.setOrigin(0.f, 0.f);
 	sprite.setPosition(spawnposition);
 }
